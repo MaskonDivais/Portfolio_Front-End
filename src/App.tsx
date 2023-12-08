@@ -1,8 +1,11 @@
 import React from 'react'
+import Menu from './Components/Menu/menu'
 
 const App = () => {
   return (
-    <div>Olexandr Doroshkevich</div>
+    <div>
+      <Menu/>
+    </div>
   )
 }
 
