@@ -1,9 +1,10 @@
 import React from 'react'
-import Menu from './Components/Menu/menu'
+import Menu from './Components/Menu/Menu'
+import './style.css';
 
 const App = () => {
   return (
-    <div>
+    <div className='container'>
       <Menu/>
     </div>
   )

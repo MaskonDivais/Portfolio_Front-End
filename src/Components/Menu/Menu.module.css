@@ -1,3 +1,105 @@
 .container{
-    
+    position: fixed;
+    width: 100vw;
+    height: max-content;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    display: grid;
+    grid-template-columns: 10% auto max-content max-content;
+    justify-items: stretch;
+    background-color: white;
+}
+.logotip{
+    position: relative;
+    display: block;
+    width: max-content;
+    height: max-content;
+    margin: 0.5vh;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+}
+.logotip_elem{
+    position: relative;
+    display: block;
+    width: auto;
+    height: 5vh;
+    margin: 0px auto;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.element_list{
+    position: relative;
+    display: grid;
+    width: max-content;
+    height: max-content;
+    margin: 0.5vh;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 1vh;
+}
+.elem{
+    position: relative;
+    display: block;
+    width: max-content;
+    height: max-content;
+    margin: 0px auto;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+transition: all 0.3s;
+}
+.elem:hover{
+    color: blue;
+}
+.authorization{
+    position: relative;
+    display: block;
+    width: max-content;
+    height: max-content;
+    margin: 0.5vh;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+}
+.authorization_elem{
+    position: relative;
+    display: block;
+    width: auto;
+    height: 3vh;
+    margin: 0px auto;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.basket{
+    position: relative;
+    display: block;
+    width: max-content;
+    height: max-content;
+    margin: 0.5vh;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+}
+.basket_elem{
+    position: relative;
+    display: block;
+    width: auto;
+    height: 3vh;
+    margin: 0px auto;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
