@@ -1,10 +1,54 @@
 .container{
     display: block;
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: auto;
-  
+    margin: 0px;
+    padding: 0px;
 }
 body{
     background-color: aquamarine;
+    margin: 0px;
+    padding: 0px;
 }
+
+.container {
+    display: flex;
+    position: relative;
+  }
+  
+  .slides {
+    flex: 1;
+  }
+  
+  .navigation-buttons {
+    position: fixed;
+    top: 50%;
+    right: 20px; /* Отступ от правого края */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .navigation-diamond {
+    width: 10px;
+    height: 10px;
+    margin: 5px 0;
+    transform: rotate(45deg); /* Поворот на 45 градусов для создания ромба */
+    cursor: pointer;
+  }
+  
+  .navigation-diamond::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 3px; /* Радиус для закругления углов и создания отверстия в ромбе */
+  }
+  
+  .navigation-diamond.active::before {
+    background-color: #ff0000;
+  }
+  
