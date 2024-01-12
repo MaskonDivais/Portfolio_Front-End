@@ -4,7 +4,7 @@ import Start from './Components/Start/Start';
 import Play from './Components/Play/Play';
 import Ander from './Components/Ander/Ander';
 
-const App: React.FC = () => {
+const App = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const nextSlide = () => {
@@ -33,7 +33,7 @@ const App: React.FC = () => {
     return () => {
       window.removeEventListener('wheel', handleScroll);
     };
-  }, []); // Обработчик события скролла будет добавлен при монтировании и удален при размонтировании компонента
+  }, []); 
 
   return (
     <div className="container">
@@ -43,15 +43,26 @@ const App: React.FC = () => {
         {activeSlide === 2 && <Ander />}
       </div>
 
-      <div className="navigation-buttons">
-        {[0, 1, 2].map((index) => (
-          <div
-            key={index}
-            className={`navigation-diamond ${index === activeSlide ? 'active' : ''}`}
-            onClick={() => setActiveSlide(index)}
-          />
-        ))}
-      </div>
+      <ul className="navigation-buttons">
+        <li>
+          <a href="#" data-tooltip="Slide 1" className={activeSlide === 0 ? 'active' : ''} onClick={() => setActiveSlide(0)}>
+            <span className="custom-navigation-element"></span>
+            <span className="gradient-element"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-tooltip="Slide 2" className={activeSlide === 1 ? 'active' : ''} onClick={() => setActiveSlide(1)}>
+            <span className="custom-navigation-element"></span>
+            <span className="gradient-element"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-tooltip="Slide 3" className={activeSlide === 2 ? 'active' : ''} onClick={() => setActiveSlide(2)}>
+            <span className="custom-navigation-element"></span>
+            <span className="gradient-element"></span>
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
