@@ -1,6 +1,6 @@
-// HorizontalSlider.tsx
+// VerticalSlider.tsx
 import React, { useState } from 'react';
-import styles from './HorizontalSlider.module.css';
+import styles from './VerticalSlider.module.css';
 
 interface SliderItem {
   image: string;
@@ -16,7 +16,7 @@ const sliderItems: SliderItem[] = [
   // Добавьте другие элементы по аналогии
 ];
 
-const HorizontalSlider: React.FC = () => {
+const VerticalSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -28,8 +28,8 @@ const HorizontalSlider: React.FC = () => {
   };
 
   return (
-    <div className={styles.horizontalSliderContainer}>
-      <div className={styles.horizontalSlider} style={{ transform: `translateX(-${currentIndex * 20}%)` }}>
+    <div className={styles.verticalSliderContainer}>
+      <div className={styles.verticalSlider} style={{ transform: `translateY(-${currentIndex * 20}%)` }}>
         {sliderItems.map((item, index) => (
           <div key={index} className={styles.sliderItem}>
             <img src={item.image} alt={`Изображение ${index + 1}`} />
@@ -43,4 +43,4 @@ const HorizontalSlider: React.FC = () => {
   );
 };
 
-export default HorizontalSlider;
+export default VerticalSlider;
