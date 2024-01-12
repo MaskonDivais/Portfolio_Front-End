@@ -1,49 +1,105 @@
-.container {
-    position: absolute;
-    overflow: hidden;
-    width: 80%;
-    height: 50%;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -0%);
+.swiper-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.swiper-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 400px;
+  transition: opacity 0.6s ease;
+}
+
+.swiper-container.swiper-container-coverflow {
+  padding: 2% 0 calc(2% + 30px) 0;
+}
+
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide .swiper-content {
+  position: absolute;
+  bottom: 4%;
+  left: 2%;
+  max-width: 70%;
+  padding: 10px 16px;
+  color: #fff;
+  font-family: Verdana, sans-serif;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.swiper-slide .swiper-content .swiper-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.swiper-slide .swiper-content .swiper-caption {
+  display: block;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+[class^='swiper-button-'] {
+  width: 44px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper-button-prev {
+  transform: translateX(50px);
+}
+
+.swiper-button-next {
+  transform: translateX(-50px);
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+  bottom: 10px;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #337ab7;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #337ab7;
+  border-radius: 50%;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:hover,
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    bottom: 4px;
   }
-  
-  .wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  .swiper-slide .swiper-content .swiper-title {
+    font-size: 22px;
   }
-  
-.container .slide {
-    display: block;
-    background-color: aqua;
-    height: 100%;
-    width: 30% !important; /* Пять элементов по 20% ширины */
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+  .swiper-slide .swiper-content .swiper-caption {
+    font-size: 13px;
   }
-  
-  .slide.visible {
-    opacity: 1;
-  }
-  
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .arrow:first-child {
-    left: 5px;
-  }
-  
-  .arrow:last-child {
-    right: 5px;
-  }
-  
+}

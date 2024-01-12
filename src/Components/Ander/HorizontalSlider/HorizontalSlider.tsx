@@ -1,51 +1,60 @@
-import React, { useState } from 'react';
-import module from './HorizontalSlider.module.css';
+import React, { useEffect, useState } from 'react';
 
-const slidesData = [
-  { id: 1, imageUrl: 'url_1.jpg', title: 'Название 1' },
-  { id: 2, imageUrl: 'url_2.jpg', title: 'Название 2' },
-  { id: 3, imageUrl: 'url_3.jpg', title: 'Название 3' },
-  { id: 4, imageUrl: 'url_4.jpg', title: 'Название 4' },
-  { id: 5, imageUrl: 'url_5.jpg', title: 'Название 5' },
-  { id: 6, imageUrl: 'url_6.jpg', title: 'Название 6' },
-  { id: 7, imageUrl: 'url_7.jpg', title: 'Название 7' },
-  { id: 8, imageUrl: 'url_8.jpg', title: 'Название 8' },
-  { id: 9, imageUrl: 'url_9.jpg', title: 'Название 9' },
-  { id: 10, imageUrl: 'url_10.jpg', title: 'Название 10' },
-];
+interface HorizontalSliderProps {
+  images: string[]; // Array of image URLs
+}
 
-const itemsPerPage = 5;
+const HorizontalSlider: React.FC<HorizontalSliderProps> = ({ images = [] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-const HorizontalSlider: React.FC = () => {
-  const [startIndex, setStartIndex] = useState(0);
-
-  const handleArrowClick = (direction: 'prev' | 'next') => {
-    if (direction === 'next') {
-      setStartIndex((prevIndex) => (prevIndex + 1) % slidesData.length);
-    } else if (direction === 'prev') {
-      setStartIndex((prevIndex) => (prevIndex - 1 + slidesData.length) % slidesData.length);
-    }
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000); // Change the interval as needed, or set to 0 to disable autoplay
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentIndex, images.length]);
+
   return (
-    <div className={module.container}>
-      <div className={module.wrapper}>
-        {slidesData.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`${module.slide} ${index >= startIndex && index < startIndex + itemsPerPage ? module.visible : ''}`}
-          >
-            <img src={slide.imageUrl} alt={`Slide ${slide.id}`} />
-            <p>{slide.title}</p>
-          </div>
-        ))}
+    <div className="mod_ext_horizontal_slider">
+      <div className="horizontal-slider" style={{ position: 'relative', overflow: 'hidden' }}>
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0, transition: 'transform 0.5s ease' }}>
+          {images.map((imageUrl, index) => (
+            <li
+              key={index}
+              style={{
+                position: 'absolute',
+                left: `${index * 100}%`,
+                transition: 'left 0.5s ease',
+                width: '100%',
+                boxSizing: 'border-box',
+              }}
+            >
+              <img
+                src={imageUrl}
+                alt={`Slider Item ${index + 1}`}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </li>
+          ))}
+        </ul>
+        <button onClick={handlePrev} style={{ position: 'absolute', top: '50%', left: '10px', zIndex: 1 }}>
+          Prev
+        </button>
+        <button onClick={handleNext} style={{ position: 'absolute', top: '50%', right: '10px', zIndex: 1 }}>
+          Next
+        </button>
       </div>
-      <button className={module.arrow} onClick={() => handleArrowClick('prev')}>
-        Назад
-      </button>
-      <button className={module.arrow} onClick={() => handleArrowClick('next')}>
-        Вперед
-      </button>
     </div>
   );
 };
