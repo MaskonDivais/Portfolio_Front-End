@@ -1,0 +1,49 @@
+.container {
+    position: absolute;
+    overflow: hidden;
+    width: 80%;
+    height: 50%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+  }
+  
+  .wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+.container .slide {
+    display: block;
+    background-color: aqua;
+    height: 100%;
+    width: 30% !important; /* Пять элементов по 20% ширины */
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.visible {
+    opacity: 1;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .arrow:first-child {
+    left: 5px;
+  }
+  
+  .arrow:last-child {
+    right: 5px;
+  }
+  

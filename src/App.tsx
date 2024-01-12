@@ -3,9 +3,10 @@ import './style.css';
 import Start from './Components/Start/Start';
 import Play from './Components/Play/Play';
 import Ander from './Components/Ander/Ander';
+import Navigation from './UI/Navigation/Navigation';
 
-const App = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
+const App: React.FC = () => {
+  const [activeSlide, setActiveSlide] = useState<number>(0);
 
   const nextSlide = () => {
     setActiveSlide((prevSlide) => (prevSlide + 1) % 3);
@@ -28,12 +29,18 @@ const App = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('wheel', handleScroll);
+    const handleScrollWrapper = (event: Event) => {
+      if (event instanceof WheelEvent) {
+        handleScroll(event);
+      }
+    };
+
+    window.addEventListener('wheel', handleScrollWrapper);
 
     return () => {
-      window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('wheel', handleScrollWrapper);
     };
-  }, []); 
+  }, []);
 
   return (
     <div className="container">
@@ -43,26 +50,7 @@ const App = () => {
         {activeSlide === 2 && <Ander />}
       </div>
 
-      <ul className="navigation-buttons">
-        <li>
-          <a href="#" data-tooltip="Slide 1" className={activeSlide === 0 ? 'active' : ''} onClick={() => setActiveSlide(0)}>
-            <span className="custom-navigation-element"></span>
-            <span className="gradient-element"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#" data-tooltip="Slide 2" className={activeSlide === 1 ? 'active' : ''} onClick={() => setActiveSlide(1)}>
-            <span className="custom-navigation-element"></span>
-            <span className="gradient-element"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#" data-tooltip="Slide 3" className={activeSlide === 2 ? 'active' : ''} onClick={() => setActiveSlide(2)}>
-            <span className="custom-navigation-element"></span>
-            <span className="gradient-element"></span>
-          </a>
-        </li>
-      </ul>
+      <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
     </div>
   );
 };
