@@ -6,25 +6,31 @@
   height: 50vh;
   position: relative;
   overflow: hidden;
+  display: grid;
+  justify-content: center;
+
 }
 
 .horizontalSlider {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: auto;
+  width: 85vw;
   height: 100%;
 }
 
 .sliderItem {
-  background: burlywood;
-  min-width: 20%;
+
+  width: 20%;
   box-sizing: border-box;
   position: relative;
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 
 .sliderItem img {
-  width: 100%;
-  height: 100%;
+  width: 15vw;
+  height: 15vw;
   object-fit: cover;
 }
 
@@ -42,7 +48,7 @@
 .nextBtn {
   position: absolute;
   top: 50%;
-  background-color: #3498db;
+  background-color: #ffffff00;
   color: #fff;
   border: none;
   padding: 10px;
@@ -50,9 +56,19 @@
 }
 
 .prevBtn {
+  padding: 0px;
+  margin: 0px;
   left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: scale(3) translate(-0%, -50%);
 }
 
 .nextBtn {
+  padding: 0px;
+  margin: 0px;
   right: 10px;
+  position: absolute;
+  top: 50%;
+  transform: scale(3) translate(-0%, -50%);
 }

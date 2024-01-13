@@ -7,7 +7,9 @@ const Ander: React.FC = () => {
   return (
     <div className={module.container}>
       <div className={module.fon}>
-        <HorizontalSlider/> 
+        <div className={module.slider}><HorizontalSlider/></div>
+        <div className={module.footer}></div>
+        
       </div>
     </div>
   );

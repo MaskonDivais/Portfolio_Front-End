@@ -1,0 +1,89 @@
+
+.verticalSliderContainer {
+    width: 50vw;
+    height: 100%;
+    display: block;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(71, 71, 71, 0.356);
+    right: 0px;
+  }
+  
+  .verticalSlider {
+    display: flex;
+    flex-direction: column; /* Изменили направление флекс-контейнера на вертикальное */
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    justify-content: center;
+  }
+  
+  .sliderItem {
+    background: #ffffff00;
+    width: 85%;
+    min-height: 7%;
+    box-sizing: border-box;
+    position: relative;
+    border: solid 1px;
+    border-radius: 10px;
+    margin: 5px;
+    display: grid;
+  }
+  
+  .sliderItem img {
+    width: 5vh;
+    height: 5vh;
+    background: azure;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+  }
+  .names{
+    position: absolute;
+    top: 5px;
+    left: 12%;
+    transform: translateX(-50%);
+    
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .caption {
+    position: absolute;
+    bottom: 10px;
+    width: max-content;
+    height: max-content;
+    left: 18%;
+    /* transform: translateX(-50%); */
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .prevBtn,
+  .nextBtn {
+    position: absolute;
+    background-color: #ffffff00;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transform: rotate(90deg);
+  }
+  
+  .prevBtn {
+    top: 10px; /* Сдвигаем кнопку вверх */
+    left: 50%;
+    transform-origin: center center;
+    transform: translateX(-50%) rotate(90deg);
+
+  }
+  
+  .nextBtn {
+    bottom: 10px; /* Сдвигаем кнопку вниз */
+    left: 50%;
+    transform-origin: center center;
+    transform: translateX(-50%) rotate(90deg);
+  }
+  
