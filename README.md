@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+© MASFLEX
+This repository and everything it contains are intended for use as a MaskonDivais portfolio only.
+
+This application is an audio player designed for personal use and to provide information about the programming level and design abilities of the developer. All rights reserved. The content of this application is used for educational purposes only and cannot be used for commercial purposes.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
