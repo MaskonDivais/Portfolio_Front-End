@@ -37,8 +37,8 @@ const VerticalSlider: React.FC = () => {
           </div>
         ))}
       </div>
-      <button className={styles.prevBtn} onClick={handlePrev}>&lt;</button>
-      <button className={styles.nextBtn} onClick={handleNext}>&gt;</button>
+      <button className={styles.prevBtn} onClick={handlePrev}>&#8743;</button>
+      <button className={styles.nextBtn} onClick={handleNext}>&#8744;</button>
     </div>
   );
 };
