@@ -29,8 +29,29 @@
 .footer{
     height: 50vh;
     width: 100%;
-    display: block;
     position: relative;
     margin: 0px;
     padding: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto;
+    
+}
+.ContButton{
+
+}
+.Author{
+
+}
+.FIcon{
+
+} 
+.fp1{
+
+}
+.fp2{
+
+}
+.FooterLogo{
+    
 }
