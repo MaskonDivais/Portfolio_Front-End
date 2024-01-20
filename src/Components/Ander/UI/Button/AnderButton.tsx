@@ -11,9 +11,7 @@ const ThemeSwitcher = () => {
 
   return (
     <div>
-      <button className={isDarkTheme ? 'darkButton' : 'lightButton'} onClick={toggleTheme}>
-        Переключить тему
-      </button>
+      <button className={isDarkTheme ? 'darkButton' : 'lightButton'} onClick={toggleTheme}/>
     </div>
   );
 };

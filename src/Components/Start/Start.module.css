@@ -26,12 +26,27 @@
     position: absolute;
     margin: 0px;
     padding: 0px;
-    width: 40%;
+    width: 75vw;
     height: max-content;
-    top: 15%;
-    left: 30%;
+    top: 20%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 .P1{
     text-align: center;
+    font-family: 'Arkhip', sans-serif;
+    font-size: 16px;
+    width: 70%;
+    float: right;
+    display: block;
+    position: relative;
+    text-align: justify;
+    top: 0%;
+    left: 45%;
+    transform: translate(-50%, -0%);
+}
+.H1{
+    font-family: 'Arkhip', sans-serif;
+    font-size: 10vh;
 }
