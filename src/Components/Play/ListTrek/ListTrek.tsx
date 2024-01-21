@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import module from './ListTrek/ListTrek.module.css'
+import module from './ListTrek.module.css'
 
 interface SliderItem {
   id: number;

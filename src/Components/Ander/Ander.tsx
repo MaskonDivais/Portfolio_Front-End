@@ -18,9 +18,11 @@ const Ander: React.FC = () => {
   const stlIC_2 = isDarkTheme ? 'ItemIcon2_w' : 'ItemIcon2_d';
   const stlIC_3 = isDarkTheme ? 'ItemIcon3_w' : 'ItemIcon3_d';
   const ItemLogo = isDarkTheme ? 'FooterLogo_w' : 'FooterLogo_d';
+  const container = isDarkTheme ? 'container_w' : 'container_d';
 
+  
   return (
-    <div className={module.container}>
+    <div className={container}>
       <div className={paragraphClass}>
         <div className={module.slider}><HorizontalSlider/></div>
 

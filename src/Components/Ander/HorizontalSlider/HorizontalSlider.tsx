@@ -1,6 +1,9 @@
 // HorizontalSlider.tsx
 import React, { useState } from 'react';
 import styles from './HorizontalSlider.module.css';
+import { useTheme } from '../../ThemeContext';
+import "../../StyleGlobal/Dark.css"
+import "../../StyleGlobal/Light.css"
 
 interface SliderItem {
   id: number;
@@ -26,6 +29,11 @@ const sliderItems: SliderItem[] = [
 ];
 
 const HorizontalSlider: React.FC = () => {
+
+  const { isDarkTheme } = useTheme();
+
+  const sliderItem = isDarkTheme ? 'sliderItem_w' : 'sliderItem_d';
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsToShow = 5; // Количество видимых элементов
 
@@ -45,8 +53,8 @@ const HorizontalSlider: React.FC = () => {
     <div className={styles.horizontalSliderContainer}>
       <div className={styles.horizontalSlider}>
         {getVisibleSliderItems().map((item) => (
-          <div key={item.id} className={styles.sliderItem}>
-            <img src={item.image} alt={`Изображение ${item.id}`} />
+          <div key={item.id} className={sliderItem}>
+            <img className={styles.img} src={item.image} alt={`Изображение ${item.id}`} />
             <div className={styles.names}>{item.names}</div>
             <div className={styles.caption}>{item.caption}</div>
           </div>

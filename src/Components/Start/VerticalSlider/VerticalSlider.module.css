@@ -28,6 +28,11 @@
     border-radius: 2px;
     margin: 5px;
     display: grid;
+    grid-template-columns: 10% 15% 25% ;
+    grid-template-areas: "imgs names caption";
+    align-items: center;
+    justify-content: start;
+    justify-items: start;
   }
   
   .sliderItem img {
@@ -36,27 +41,33 @@
     background: azure;
     display: block;
     position: absolute;
-    top: 50%;
-    left: 4%;
-    transform: translate(-50%, -50%);
+    margin: 1vh;
+
+  }
+  .imgs{
+    grid-area: imgs;
   }
   .names{
+    font-family: 'Arkhip', sans-serif;
+    grid-area: names;
     position: absolute;
-    top: 5px;
-    left: 12%;
-    transform: translateX(-50%);
-    
+
+
     padding: 5px;
     border-radius: 5px;
   }
   .caption {
+    grid-area: caption;
     position: absolute;
-    bottom: 10px;
-    left: 13%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
+
+    background-color: rgb(57 57 57 / 42%);
+
     border-radius: 5px;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
   }
   
   .prevBtn,

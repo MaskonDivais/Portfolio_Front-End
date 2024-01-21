@@ -47,7 +47,7 @@ const VerticalSlider: React.FC = () => {
       <div className={styles.verticalSlider}>
         {getVisibleSliderItems().map((item) => (
           <div key={item.id} className={styles.sliderItem}>
-            <img src={item.image} alt={`Изображение ${item.id}`} />
+            <img className={styles.imgs}src={item.image} alt={`Изображение ${item.id}`} />
             <div className={styles.names}>{item.names}</div>
             <div className={styles.caption}>{item.caption}</div>
           </div>

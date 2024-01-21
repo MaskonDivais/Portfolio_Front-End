@@ -6,6 +6,7 @@ import Ander from './Components/Ander/Ander';
 import Navigation from './UI/Navigation/Navigation';
 import { ThemeProvider } from './Components/ThemeContext';
 
+
 const App: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
 
