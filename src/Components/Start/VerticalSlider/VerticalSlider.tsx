@@ -28,7 +28,7 @@ const sliderItems: SliderItem[] = [
 
 const VerticalSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsToShow = 5; // Количество видимых элементов
+  const itemsToShow = 6; // Количество видимых элементов
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex < sliderItems.length - itemsToShow ? prevIndex + 1 : 0));
@@ -53,8 +53,8 @@ const VerticalSlider: React.FC = () => {
           </div>
         ))}
       </div>
-      <button className={styles.prevBtn} onClick={handlePrev}>{'❮'}</button>
-      <button className={styles.nextBtn} onClick={handleNext}>{'❯'}</button>
+      <button className={styles.prevBtn} onClick={handlePrev}>❮</button>
+      <button className={styles.nextBtn} onClick={handleNext}>❯</button>
     </div>
   );
 };

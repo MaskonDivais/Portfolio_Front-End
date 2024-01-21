@@ -21,11 +21,11 @@
   
   .sliderItem {
     background: #ffffff00;
-    min-height: 15%;
+    min-height: 10%;
     box-sizing: border-box;
     position: relative;
-    border: solid 2px;
-    border-radius: 5px;
+    border: solid 1px;
+    border-radius: 2px;
     margin: 5px;
     display: grid;
   }
@@ -68,13 +68,14 @@
     padding: 10px;
     cursor: pointer;
     transform: rotate(90deg);
+    
   }
   
   .prevBtn {
     top: 10px; /* Сдвигаем кнопку вверх */
     left: 50%;
     transform-origin: center center;
-    transform: translateX(-50%) rotate(90deg);
+    transform:  scale(3) rotate(90deg);
 
   }
   
@@ -82,6 +83,6 @@
     bottom: 10px; /* Сдвигаем кнопку вниз */
     left: 50%;
     transform-origin: center center;
-    transform: translateX(-50%) rotate(90deg);
+    transform:  scale(3) rotate(90deg);
   }
   

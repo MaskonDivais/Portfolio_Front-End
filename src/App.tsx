@@ -4,6 +4,7 @@ import Start from './Components/Start/Start';
 import Play from './Components/Play/Play';
 import Ander from './Components/Ander/Ander';
 import Navigation from './UI/Navigation/Navigation';
+import { ThemeProvider } from './Components/ThemeContext';
 
 const App: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
@@ -43,6 +44,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
+    <ThemeProvider>
     <div className="container">
       <div className="slides">
         {activeSlide === 0 && <Start />}
@@ -52,6 +54,7 @@ const App: React.FC = () => {
 
       <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
     </div>
+    </ThemeProvider>
   );
 };
 

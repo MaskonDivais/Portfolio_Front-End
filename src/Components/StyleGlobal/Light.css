@@ -1,0 +1,58 @@
+.fon_w{
+    display: grid;
+    background-image: url(/public/Images/cont_4_w.png);
+    filter: drop-shadow(23px 10px 3px #00000086);
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    align-content: space-between;
+    align-items: end;
+  }
+  .ItemAuthor_w{
+    background-image: url(/public/Images/Icon/iconauthor_w.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 44vw;
+    height: 42vh;
+    top: 25%;
+    left: 60%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+    z-index: -1;
+  }
+  .ItemIcon1_w{
+    background-image: url(/public/Images/Icon/iconid_w.png);
+    grid-area: ItemIcon1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5vh;
+  }
+  .ItemIcon2_w{
+    background-image: url(/public/Images/Icon/icongit_w.png);
+    grid-area: ItemIcon2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5vh;
+    height: auto;
+  }
+  .ItemIcon3_w{
+    background-image: url(/public/Images/Icon/iconinst_w.png);
+    grid-area: ItemIcon3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5vh;
+    height: auto;
+  }
+  .FooterLogo_w{
+    background-image: url(/public/Images/Icon/Logo_vert_1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 3vh;
+    height: 7vh;
+    right: 0px;
+    position: relative;
+  }
