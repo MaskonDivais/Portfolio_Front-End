@@ -4,7 +4,9 @@ import Start from './Components/Start/Start';
 import Play from './Components/Play/Play';
 import Ander from './Components/Ander/Ander';
 import Navigation from './UI/Navigation/Navigation';
+import Login from './Components/LogIn/Login';
 import { ThemeProvider } from './Components/ThemeContext';
+
 
 
 const App: React.FC = () => {
@@ -22,10 +24,8 @@ const App: React.FC = () => {
     const delta = event.deltaY;
 
     if (delta > 0) {
-      // Скролл вниз
       nextSlide();
     } else if (delta < 0) {
-      // Скролл вверх
       prevSlide();
     }
   };
@@ -47,12 +47,14 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
     <div className="container">
+      <Login />
+
       <div className="slides">
         {activeSlide === 0 && <Start />}
         {activeSlide === 1 && <Play />}
         {activeSlide === 2 && <Ander />}
       </div>
-
+      
       <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
     </div>
     </ThemeProvider>

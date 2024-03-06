@@ -28,6 +28,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSlide, nextSlide, prevSli
           <span className="gradient-element"></span>
         </a>
       </li>
+      
     </ul>
   );
 };

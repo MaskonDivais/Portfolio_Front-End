@@ -1,0 +1,95 @@
+*{
+    color: #fff;
+    font-family: 'Arkhip', sans-serif;
+}
+
+.conteiner{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(/public/Images/LogInFon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    z-index: 2;
+
+
+}
+
+.conteiner_fon{
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(180deg, rgba(29, 31, 30, 1) 0%, rgba(13, 13, 13, 1) 100%);
+}
+
+.form_name{
+    display: block;
+    width: 278px;
+    padding: 5px;
+    margin: 0px;
+    border-width: 1px;
+    line-height: 40px;
+    border-radius: 5px;
+    border-color: #ffffff;
+    border-style: solid;
+    color: white;
+    background: rgba(255, 255, 255, .2);
+    font-family: 'Jura', sans-serif;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+.form_password{
+    display: block;
+    width: 278px;
+    padding: 5px;
+    margin: 0px;
+    border-width: 1px;
+    line-height: 40px;
+    border-radius: 5px;
+    border-color: #ffffff;
+    border-style: solid;
+    color: white;
+    background: rgba(255, 255, 255, .2);
+    font-family: 'Jura', sans-serif;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+.login{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    top: 5%;
+    left: 96%;
+    transform: translate(-50%, -50%); 
+}
+.form{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cont_text{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

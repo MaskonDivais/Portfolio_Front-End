@@ -1,0 +1,26 @@
+
+.button{ 
+    font-family: 'Arkhip', sans-serif;
+    
+    display: block;
+    color: #000000;
+    font-family: 'Jura', sans-serif;
+    font-size: 17px;
+    line-height: 1;
+    text-align: center;
+    width: 210px;
+    height: 43px;
+    letter-spacing: 0.5px;
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: #ffffff !important;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 4;
+    -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
