@@ -14,8 +14,6 @@
     background-size: cover;
     background-position: bottom;
     z-index: 2;
-
-
 }
 
 .conteiner_fon{
@@ -29,6 +27,7 @@
 }
 
 .form_name{
+    grid-area: form_name;
     display: block;
     width: 278px;
     padding: 5px;
@@ -45,6 +44,7 @@
     transition: all 0.3s ease-in-out;
 }
 .form_password{
+    grid-area: form_password; 
     display: block;
     width: 278px;
     padding: 5px;
@@ -60,19 +60,10 @@
     outline: none;
     transition: all 0.3s ease-in-out;
 }
-.login{
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    width: auto;
-    height: auto;
-    display: inline-block;
-    top: 5%;
-    left: 96%;
-    transform: translate(-50%, -50%); 
-}
+
 .form{
     position: absolute;
+    display: grid;
     margin: 0px;
     padding: 0px;
     width: auto;
@@ -82,11 +73,38 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.conteiner_form{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "th2 th2"
+        "thN form_name"
+        "thP form_password"
+        "button button";
+    gap: 2.5vh;
+    justify-items: center;
+    align-items: baseline;
+}
+.button{grid-area: button;}
+.th2{
+    grid-area: th2;
+    font-size: 3.5vh;
+}
+.thN{
+    grid-area: thN;
+    font-size: 1.8vh;
+}
+.thP{
+    grid-area: thP;
+    font-size: 1.8vh;
+}
 .cont_text{
+    font-size: 1.5vh;
     position: absolute;
     margin: 0px;
     padding: 0px;
-    width: auto;
+    width: max-content;
+    max-width: 90%;
     height: auto;
     display: inline-block;
     top: 90%;

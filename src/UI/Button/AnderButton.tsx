@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './ButtonStyle.css';
-import { useTheme } from '../../ThemeContext';
+import './Style/ButtonStyle.css';
+import { useTheme } from '../../Components/ThemeContext';
 
 const ButtonSwitch = () => {
   const { toggleTheme } = useTheme();

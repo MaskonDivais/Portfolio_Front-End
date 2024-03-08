@@ -1,0 +1,42 @@
+*{
+    
+}
+.conteiner{
+    display: grid;
+    grid-template-columns:  10% 10% auto auto auto auto ;
+
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 5vh;
+    top: 0px;
+    background: linear-gradient(180deg, rgba(29, 31, 30, 1) 0%, rgba(13, 13, 13, 1) 100%);
+    z-index: 2;
+}
+
+.logotip{
+    height: 3.5vh;
+    width: 10vh;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.icon{
+    height: 3vh;
+    width: 3vh;
+    margin: 0px;    
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}

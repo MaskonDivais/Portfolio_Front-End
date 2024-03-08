@@ -1,7 +1,7 @@
 import React from 'react'
 import module from '../Ander/Andre.module.css'
 import HorizontalSlider from './HorizontalSlider/HorizontalSlider'
-import AnderButton from './Button/AnderButton';
+import AnderButton from '../../UI/Button/AnderButton';
 
 import "../StyleGlobal/Dark.css"
 import "../StyleGlobal/Light.css"
@@ -28,7 +28,7 @@ const Ander: React.FC = () => {
 
         <div className={module.contfooter}>
           <div className={module.footer}>
-            <div className={module.ContButton}><AnderButton/></div>
+            <div className={module.ContButton}></div>
             <div className={module.Author}>
               <div className={stlAU}></div>
             </div>

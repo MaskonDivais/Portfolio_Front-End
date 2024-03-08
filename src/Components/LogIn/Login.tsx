@@ -12,7 +12,7 @@ const Login = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
     
-      if (username === '1' && password === '1') {
+      if (username === 'User' && password === 'Code') {
         setIsAuthenticated(true); 
       }
     };
@@ -25,27 +25,28 @@ const Login = () => {
     <div className={module.conteiner_fon}>
         <div className={module.conteiner}>
 
-            <div className={module.login}>Log In</div>
-
             <div className={module.form}>
                 <form className={module.conteiner_form} onSubmit={handleSubmit}>
-                    <p>Log In</p>
-                    <p>Name:</p>
-                    <input className={module.form_name} type="text" placeholder="Имя пользователя"
-                        value={username} onChange={(e) => setUsername(e.target.value)}
-                    />
-                    <p>Password:</p>
-                    <input className={module.form_password} type="password" placeholder="Пароль"
-                        value={password} onChange={(e) => setPassword(e.target.value)}
-                    />
 
-                    <ButtonLogForm/>
+                    <p className={module.th2}>Log In</p>
+
+                    <p className={module.thN}>Name:</p>
+
+                    <input className={module.form_name} type="text" placeholder="User"
+                        value={username} onChange={(e) => setUsername(e.target.value)}/>
+
+                    <p className={module.thP}>Password:</p>
+
+                    <input className={module.form_password} type="password" placeholder="Code"
+                        value={password} onChange={(e) => setPassword(e.target.value)}/>
+
+                    <div className={module.button}><ButtonLogForm/></div>
 
                 </form>
             </div>
 
 
-            <div className={module.cont_text}><p>The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button.</p></div>
+            <p className={module.cont_text}>© This application is an audio player designed for personal use and to provide information about the programming level and design abilities of the developer. All rights reserved.</p>
 
 
         </div>

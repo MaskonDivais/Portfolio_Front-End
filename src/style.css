@@ -12,6 +12,7 @@ body {
   background-color: aquamarine;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
 }
 
 /* Стили для навигации, слайдов и неактивных элементов */
