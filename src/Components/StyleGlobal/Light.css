@@ -142,3 +142,10 @@
 .instag_w{
   background-image: url(/public/Images/Icon/iconinst_w.png);
 }
+
+.icon_user_w{
+  background-image: url(/public/Images/Icon/user_w.png);
+}
+.icon_pass_w{
+  background-image: url(/public/Images/Icon/password_w.png);
+}

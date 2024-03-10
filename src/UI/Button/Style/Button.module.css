@@ -10,22 +10,22 @@
 .log{
     height: 3.5vh;
     width: 3.5vh;
-    margin: 0px;    
+    margin: 0px 10px 0px 0px;    
     padding: 0px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
 }
 
-
+.p{
+    transform: skew(30deg);
+}
 .button {
     width: 210px;
     height: 43px;
     box-sizing: border-box;
-    position: relative;
-
-    margin: 0.5vh;
-    --borderWidth: 3px;
+    transform: skew(150deg);
+    --borderWidth: -5px;
     background: linear-gradient(180deg, rgba(29, 31, 30, 1) 0%, rgba(13, 13, 13, 1) 100%);
     position: relative;
     border-radius: var(--borderWidth);
@@ -38,7 +38,7 @@
     left: calc(-1 * var(--borderWidth));
     height: calc(100% + var(--borderWidth) * 2);
     width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #361a67, #361a64, #20328e, #4c517d, #5073b8, #df658d, #07b39b, #3bb8e3);
+    background: linear-gradient(60deg, #361a67, #20328e, #361a67, #361a67, #20328e, #20328e, #361a64, #361a67);
     z-index: -1;
     animation: animatedgradient 3s ease alternate infinite;
     background-size: 300% 300%;

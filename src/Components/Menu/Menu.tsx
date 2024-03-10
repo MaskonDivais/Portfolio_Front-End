@@ -16,11 +16,18 @@ const Menu = () => {
   return (
     <div className={module.conteiner}>
         <div className={`${log} ${module['logotip']}`}/>
-        <AnderButton/>
 
+        <div className={module.lineV1}/>
+
+        <div className={module.ButtonTem}><AnderButton/></div>
+        
+        <div className={module.fly}/>
+        
         <div className={`${git} ${module['icon']}`}/>
         <div className={`${lin} ${module['icon']}`}/>
         <div className={`${ins} ${module['icon']}`}/>
+
+        <div className={module.lineV2}/>
 
         <ButtonLogInLogIn/>
     </div>

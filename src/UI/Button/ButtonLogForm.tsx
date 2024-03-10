@@ -3,7 +3,7 @@ import module from './Style/Button.module.css';
 
 const ButtonLogForm = () => {
   return (
-    <button className={module.button} type="submit">Submit</button>
+    <button className={module.button} type="submit"><p className={module.p}>Send</p></button>
   )
 }
 

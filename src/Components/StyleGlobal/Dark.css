@@ -143,3 +143,11 @@
 .instag_d{
   background-image: url(/public/Images/Icon/iconinst.png);
 }
+
+
+.icon_user_d{
+  background-image: url(/public/Images/Icon/user_d.png);
+}
+.icon_pass_d{
+  background-image: url(/public/Images/Icon/password_d.png);
+}
