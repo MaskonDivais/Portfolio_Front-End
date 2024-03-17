@@ -11,13 +11,10 @@ const Menu = () => {
     const git = isDarkTheme ? 'linked_w' : 'linked_d';
     const lin = isDarkTheme ? 'github_w' : 'github_d'; 
     const ins = isDarkTheme ? 'instag_w' : 'instag_d'; 
-    const log = isDarkTheme ? 'logotip_w' : 'logotip_d';   
+   
 
   return (
     <div className={module.conteiner}>
-        <div className={`${log} ${module['logotip']}`}/>
-
-        <div className={module.lineV1}/>
 
         <div className={module.ButtonTem}><AnderButton/></div>
         

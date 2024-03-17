@@ -68,12 +68,15 @@
     display: grid;
     margin: 0px;
     padding: 0px;
-    width: auto;
-    height: auto;
-    display: inline-block;
-    top: 50%;
+    width: 75vh;
+    height: 75vh    ;
+
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: black;
+    border-radius: 50%;
+    filter: none !important;
 }
 .conteiner_form{
     display: grid;
