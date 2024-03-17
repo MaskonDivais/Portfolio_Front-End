@@ -1,6 +1,8 @@
 *{
     color: #fff;
     font-family: 'Arkhip', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 .conteiner{
@@ -34,10 +36,10 @@
     width: 278px;
     padding: 5px;
     margin: 0px;
-    border-width: 2px;
+    border-width: 1px;
     line-height: 3.2vh;
     border-radius: 5px;
-    border-color: #203b99;
+    border-color: #ffffff;
     border-style: solid;
     color: white;
     background: rgba(255, 255, 255, .2);
@@ -51,10 +53,10 @@
     width: 278px;
     padding: 5px;
     margin: 0px;
-    border-width: 2px;
+    border-width: 1px;
     line-height: 3.2vh;
     border-radius: 5px;
-    border-color: #33126b;
+    border-color: #ffffff;
     border-style: solid;
     color: white;
     background: rgba(255, 255, 255, .2);
@@ -74,27 +76,124 @@
     top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: black;
+    background: #1a1a1a;
     border-radius: 50%;
     filter: none !important;
 }
 .conteiner_form{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto max-content max-content max-content auto;
     grid-template-areas:
-        "th2 th2"
-        "thN form_name"
-        "thP form_password"
-        "button button";
+        "ContUp"
+        "ContLogWith"
+        "OR"
+        "ContItem1"
+        "ContItem2"
+        "ContLow";
     gap: 2.5vh;
     justify-items: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    background-image: url(/public/Images/form.png);
+    overflow: hidden;
 }
-.button{grid-area: button;}
+.ContUp{
+    grid-area: ContUp;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "LogoLog"
+        "th2";
+    justify-items: center;
+    gap: 10px;
+
+}
+.LogoLog{
+    grid-area: LogoLog;
+    height: 3vh;
+    width: 10vh;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    background-image: url(/public/Images/Icon/Logo_2.png);
+}
 .th2{
     grid-area: th2;
-    font-size: 3.5vh;
+    font-size: 2.3vh;
 }
+.ContLogWith{
+    grid-area: ContLogWith;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+
+}
+.OR{
+    grid-area: OR;
+    display: grid;
+    grid-template-columns: auto;
+}
+.ContItem1{
+    grid-area: ContItem1;
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-areas: "thN form_name"; 
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.ContItem2{
+    grid-area: ContItem2;
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-areas:
+        "thP form_password"
+        "TI TI";
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.ContLow{
+    grid-area: ContLow;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "button button"
+        "TI TI";
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+.TI{
+    grid-area: TI;
+    font-size: 1.3vh;
+}
+
+
+
+
+
+
+
+.button{grid-area: button;}
+
 .icon_user{
     grid-area: thN;
     height: 4vh;
@@ -118,16 +217,16 @@
 .cont_text{
     font-size: 1.5vh;
     position: absolute;
+    display: flex;
     margin: 0px;
     padding: 5px;
-    width: max-content;
-    max-width: 90%;
+    width: 100%;
     height: auto;
     background: #9595956b;
-    display: inline-block;
-    top: 90%;
+    top: 98%;
     left: 50%;
     transform: translate(-50%, -50%);
+    justify-content: center;
 }
 .cont_text::after {
     content: "";

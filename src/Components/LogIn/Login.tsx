@@ -39,13 +39,13 @@ const Login = () => {
 
             <div className={module.form}>
                 <form className={module.conteiner_form} onSubmit={handleSubmit}>
-                  
-                    <div>
-                    <div className={module.LogoLog}></div>
-                    <p className={module.th2}>Sign up or Login with</p>
+
+                    <div className={module.ContUp}>
+                      <div className={module.LogoLog}></div>
+                      <p className={module.th2}>Sign up or Login with</p>
                     </div>
 
-                    <div className={module.LogWith}>
+                    <div className={module.ContLogWith}>
                       <div><div className={module.LogApple}/><p></p></div>
                       <div><div className={module.LogGoogle}/><p></p></div>
                       <div><div className={module.LogMicrosoft}/><p></p></div>
@@ -53,20 +53,20 @@ const Login = () => {
 
                     <div className={module.OR}>OR</div>
 
-                    <div>
-                    <div className={`${user} ${module['icon_user']}`}/>
-                    <input className={module.form_name} type="text" placeholder="User Name (1)" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                    <div className={module.ContItem1}>
+                      <div className={`${user} ${module['icon_user']}`}/>
+                      <input className={module.form_name} type="text" placeholder="User Name (1)" value={username} onChange={(e) => setUsername(e.target.value)}/>
                     </div>
 
-                    <div>
-                    <div className={`${pass} ${module['icon_pass']}`}/>
-                    <input className={module.form_password} type="password" placeholder="Password (1)" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                        <p>Forgot your password?</p>
+                    <div className={module.ContItem2}>
+                      <div className={`${pass} ${module['icon_pass']}`}/>
+                      <input className={module.form_password} type="password" placeholder="Password (1)" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <p className={module.TI}>Forgot your password?</p>
                     </div>
 
-                    <div>
-                    <div className={module.button}><ButtonLogForm/></div>
-                    <p>Privacy Policy</p><p>Terms of Service</p>
+                    <div className={module.ContLow}>
+                      <div className={module.button}><ButtonLogForm/></div>
+                      <p className={module.TL}>Privacy Policy</p><p className={module.TL}>Terms of Service</p>
                     </div>
 
                 </form>
