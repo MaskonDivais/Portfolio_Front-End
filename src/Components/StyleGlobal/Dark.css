@@ -128,24 +128,25 @@
 }
 
 .login_d{
-  background-image: url(/public/Images/UI/LogInD.png);
+  background-image: url(/public/Images/UI/LogInW.png);
 }
 
 
 .linked_d{
-  background-image: url(/public/Images/Icon/iconid.png);
+  background-image: url(/public/Images/Icon/iconid_w.png);
 }
 .github_d{
-  background-image: url(/public/Images/Icon/icongit.png);
+  background-image: url(/public/Images/Icon/icongit_w.png);
 }
 .instag_d{
-  background-image: url(/public/Images/Icon/iconinst.png);
+  background-image: url(/public/Images/Icon/iconinst_w.png);
 }
 
 
 .icon_user_d{
-  background-image: url(/public/Images/Icon/user_d.png);
+  background-image: url(/public/Images/Icon/user_w.png);
 }
 .icon_pass_d{
-  background-image: url(/public/Images/Icon/password_d.png);
+  background-image: url(/public/Images/Icon/password_w.png);
 }
+

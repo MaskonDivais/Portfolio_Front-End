@@ -7,6 +7,7 @@ import Navigation from './UI/Navigation/Navigation';
 import Login from './Components/LogIn/Login';
 import { ThemeProvider } from './Components/ThemeContext';
 import Menu from './Components/Menu/Menu';
+import AnderButton from './UI/Button/AnderButton';
 
 
 
@@ -57,6 +58,7 @@ const App: React.FC = () => {
       </div>
       
       <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
+      <AnderButton/>
       <Menu/>
     </div>
     </ThemeProvider>

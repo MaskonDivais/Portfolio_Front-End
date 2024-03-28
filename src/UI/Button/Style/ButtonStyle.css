@@ -163,3 +163,15 @@
       filter: blur(0px);
     }
   }
+
+.ButtonAnder{
+  position: fixed;
+  z-index: 0;
+  margin: 10px 7px;
+  bottom: 0px;
+}
+.switch-label{
+  display: block;
+  width: 11vh;
+  height: 3.5vh;
+}

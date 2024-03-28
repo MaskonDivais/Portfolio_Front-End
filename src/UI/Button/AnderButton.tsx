@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import './Style/ButtonStyle.css';
 import { useTheme } from '../../Components/ThemeContext';
 
+
 const ButtonSwitch = () => {
   const { toggleTheme } = useTheme();
 
+
+
   return (
-    <div>
+    <div className="ButtonAnder">
       <label className="switch-label" htmlFor="switchMode">
-        <input
+        <input 
           id="switchMode"
           type="checkbox"
           name="checkbox"

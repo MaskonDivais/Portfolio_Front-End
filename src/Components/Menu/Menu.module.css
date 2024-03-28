@@ -4,26 +4,28 @@
 
 .conteiner{
     display: grid;
-    grid-template-columns: max-content auto max-content max-content max-content 2px max-content;
+    grid-template-columns: max-content max-content max-content 2px max-content;
     align-content: center;
     align-items: center;
     position: fixed;
     gap: 10px;
     margin: 0px;
-    padding: 0px;
-    width: 100vw;
+    width: max-content;
     height: 5vh;
+    right: 0px;
     top: 0px;
-    background-color: #2b2b2b;
+    background-color: #2b2b2b00;
     z-index: 2;
-    z-index: 2;
+    padding: 0 10px; 
+    box-sizing: border-box;
+    justify-content: end;
 }
 
 .lineV2{
     position: relative;
-    width: 2px;
-    height: 90%;
-    background: linear-gradient(180deg, rgb(28 64 157) 0%, rgb(50 19 103) 100%);
+    width: 1px;
+    height: 70%;
+    background: #ffffff;
 }
 
 
@@ -35,4 +37,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
+    transition: all 0.2s;
+    filter: brightness(0.7);
+}
+
+.icon:hover {
+    filter: brightness(1);
 }

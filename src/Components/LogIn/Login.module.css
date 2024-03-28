@@ -3,6 +3,7 @@
     font-family: 'Arkhip', sans-serif;
     margin: 0px;
     padding: 0px;
+    user-select: none;
 }
 
 .conteiner{
@@ -11,12 +12,13 @@
     height: 100vh;
     margin: 0px;
     padding: 0px;
-    background-image: url(/public/Images/LogInFon.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     z-index: 2;
+    background-image: url(/public/Images/LogInFon.png);
     filter: drop-shadow(23px 10px 3px #00000086);
+
 }
 
 .conteiner_fon{
@@ -42,7 +44,7 @@
     border-color: #ffffff;
     border-style: solid;
     color: white;
-    background: rgba(255, 255, 255, .2);
+    background: rgb(0 0 0 / 33%);
     font-family: 'Jura', sans-serif;
     outline: none;
     transition: all 0.3s ease-in-out;
@@ -59,7 +61,7 @@
     border-color: #ffffff;
     border-style: solid;
     color: white;
-    background: rgba(255, 255, 255, .2);
+    background: rgb(0 0 0 / 33%);
     font-family: 'Jura', sans-serif;
     outline: none;
     transition: all 0.3s ease-in-out;
@@ -70,14 +72,13 @@
     display: grid;
     margin: 0px;
     padding: 0px;
-    width: 75vh;
-    height: 75vh    ;
-
-    top: 54%;
+    width: 935px;
+    height: 574px;
+    
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #1a1a1a;
-    border-radius: 50%;
     filter: none !important;
 }
 .conteiner_form{
@@ -88,18 +89,18 @@
         "ContUp"
         "ContLogWith"
         "OR"
-        "ContItem1"
-        "ContItem2"
+        "ContItem"
         "ContLow";
-    gap: 2.5vh;
+    gap: 2vh;
     justify-items: center;
     align-items: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center;
-    border-radius: 50%;
-    background-image: url(/public/Images/form.png);
     overflow: hidden;
+    align-content: center;
+    background-image: url(/public/Images/Beground_d.png);    
+    
 }
 .ContUp{
     grid-area: ContUp;
@@ -132,15 +133,27 @@
     display: grid;
     grid-template-columns: auto;
     gap: 10px;
-
+    width: 36.5%;
+    background: #89898936;
+    border-radius: 10px;
+    padding: 10px;
 }
 .OR{
     grid-area: OR;
     display: grid;
     grid-template-columns: auto;
 }
+
+.ContItAll{
+    display: grid;
+    gap: 2vh;
+    grid-area: ContItem;
+    background: #89898936;
+    border-radius: 10px;
+    padding: 10px;
+}
 .ContItem1{
-    grid-area: ContItem1;
+   
     display: grid;
     grid-template-columns: 10% auto;
     grid-template-areas: "thN form_name"; 
@@ -149,10 +162,10 @@
     align-content: center;
     align-items: center;
     gap: 10px;
-
+    
 }
 .ContItem2{
-    grid-area: ContItem2;
+
     display: grid;
     grid-template-columns: 10% auto;
     grid-template-areas:
@@ -255,7 +268,7 @@
   video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: none;
     left: 0;
     top: 0;
     position: absolute;
@@ -280,4 +293,68 @@
 .FonTextAnder{
     color: #42006e !important;
 }
- 
+.PW{
+    font-family: '', sans-serif;
+    font-size: 14px;
+}
+.LogApple{
+    
+    height: 3.5vh;
+    width: 3.5vh;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    background-image: url(/public/Images/Icon/AppleD.png);
+}
+.LogGoogle{
+    
+    height: 3.5vh;
+    width: 3.5vh;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    background-image: url(/public/Images/Icon/Google.png);
+}
+.LogMicrosoft{
+    height: 3.5vh;
+    width: 3.5vh;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: contain    ;
+    background-position: bottom;
+    background-image: url(/public/Images/Icon/Windows.png);
+}
+.conWith{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    transition: all 0.3s;
+    padding: 2px;
+    border-radius: 5px;    
+   
+}
+.conWith:hover{
+    background: rgba(95, 95, 95, 0.308);
+}
+.TI{
+    font-size: 12px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+.TI:hover{
+    color: #ebc801;
+}
+.TL{
+    font-size: 12px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+.TL:hover{
+    color: #ebc801;
+}

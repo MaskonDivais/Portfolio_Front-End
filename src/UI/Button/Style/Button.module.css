@@ -8,15 +8,20 @@
 }
 
 .log{
-    height: 3.5vh;
-    width: 3.5vh;
-    margin: 0px 10px 0px 0px;    
+    height: 2.7vh;
+    width: 2.7vh;
+    margin: 0px;    
     padding: 0px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
+    transition: all 0.2s;
+    filter: brightness(0.7);
 }
 
+.log:hover {
+    filter: brightness(1);
+}
 .p{
     transform: skew(30deg);
 }
@@ -55,3 +60,4 @@
           background-position: 0% 50%;
       }
   }
+
