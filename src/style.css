@@ -27,7 +27,7 @@ body {
 .navigation-buttons {
   position: fixed;
   top: 50%;
-  right: 20px;
+  right: 0px;
   transform: translateY(-50%);
   list-style-type: none;
   padding: 0;
@@ -101,3 +101,113 @@ body {
 .navigation-buttons a:hover [data-tooltip]::after {
   opacity: 1;
 }
+
+
+
+
+
+.loadingAnimation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 6px);
+  width: calc(100vw - 6px);
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-rows: auto 12% 20%;
+  align-items: center;
+  justify-items: center;
+  margin: 3px;
+  --borderWidth: 3px; 
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+
+  background-image: url(/public/Images/LogInFon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+
+}
+.loadingAnimation:after {
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  content: '';
+
+  background: linear-gradient(60deg, #361a67, #361a64, #20328e, #4c517d, #5073b8, #df658d, #07b39b, #3bb8e3);
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+  margin: 0px;
+  padding: 0px;
+}
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+.loadingText {
+ 
+  
+  font-size: 5vh;
+
+  opacity: 0;
+  animation: loadingAnimation 2s infinite alternate;
+}
+
+.loadingText {
+  position: absolute;
+  animation: fadeInLetters 1s forwards; /* Применяем анимацию */
+}
+/* Добавляем стили анимации */
+@keyframes fadeInLetters {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+}
+
+
+.loadingText:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loadingText:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loadingText:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.loadingText:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.loadingText:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.loadingText:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.loadingText:nth-child(7) {
+  animation-delay: 0.7s;
+}
+

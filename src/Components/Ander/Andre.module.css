@@ -9,8 +9,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    align-content: space-between;
-    align-items: end;
+    align-content: stretch;
+
 }
 .slider{
     height: 65vh;
@@ -26,24 +26,10 @@
     justify-items: center;
     align-items: center;
     height: 35vh;
+    width: 100vw;
     overflow: hidden;
 }
-.footer{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    display: grid;
-    grid-template-columns: 20% 40% 20%;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-        "ContButton Author FIcon"
-        "ContButton Author FIcon"
-        "ContButton ContCopi FIcon";
-    justify-items: center;
-    justify-content: center;
-}
+
 
 .ContButton{
     grid-area: ContButton;
@@ -95,11 +81,10 @@
     grid-template-areas:
         "FooterLogo fp1"
         "FooterLogo fp2";
-    width: 650px;
-    bottom: 5%;
-    column-gap: 1vh;
-    left: 58%;
-    transform: translate(-50%, -0%);
+        height: auto;
+        width: auto;
+        border-radius: 10px;
+        background-color: rgba(185, 0, 0, 0.363);
 }
 .fp1{
     width: 100%;
@@ -111,8 +96,7 @@
     text-align: justify;
     font-size: 12px;
     background: #7d7d7d29;
-    margin: 5px 5px 5px 5px;
-    padding: 0.5vh;
+
 }
 .fp2{
     width: 100%;
@@ -134,3 +118,59 @@
     align-items: center;
 }
 
+.ContMap{
+    display: block;
+    position: relative;
+    height: 50vh;
+    width: 85vw;
+    border-radius: 10px;
+    background-color: #361a6463;
+}
+
+
+.footer{
+    height: 95%;
+    width: 85vw;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    grid-template-rows: 85% 10% 0px;
+    grid-template-areas:
+        "Links Navi NewItem"
+        "ContCopi ContCopi ContCopi"
+        "Author Author Author";
+    justify-content: center;
+    gap: 0px;
+    justify-items: center;
+    align-items: center;
+    align-content: stretch;
+}
+.Links{
+    grid-area: Links;
+    position: relative;
+    display: block;
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(2, 129, 80, 0.322);
+}
+.Navi{
+    grid-area: Navi;
+    position: relative;
+    display: block;
+    height: 80%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgba(0, 108, 231, 0.445);
+}
+.NewItem{
+    grid-area: NewItem;
+    position: relative;
+    display: block;
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(8, 0, 128, 0.541);
+}

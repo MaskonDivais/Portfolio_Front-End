@@ -24,28 +24,20 @@ const Ander: React.FC = () => {
   return (
     <div className={container}>
       <div className={paragraphClass}>
-        <div className={module.slider}><HorizontalSlider/></div>
+        <div className={module.ContMap}></div>
 
-        <div className={module.contfooter}>
-          <div className={module.footer}>
-            <div className={module.ContButton}></div>
-            <div className={module.Author}>
-              <div className={stlAU}></div>
-            </div>
-            <div className={module.FIcon}>
-              <div className={stlIC_1}></div>
-              <div className={stlIC_2}></div>
-              <div className={stlIC_3}></div>
-              <p className={module.fp3}>These social media links are provided for informational purposes to provide you with an opportunity to meet the creator.</p>
-            </div>
+        <div className={module.contfooter}><div className={module.footer}>
+            <div className={module.Author}><div className={stlAU}/></div>
+           
+            <div className={module.Links}></div>
+            <div className={module.Navi}></div>
+            <div className={module.NewItem}></div>
 
             <div className={module.ContCopi}>
-              <p className={module.fp1}>This application is an audio player designed for personal use and to provide information about the programming level and design abilities of the developer.</p>
-              <div className={module.FooterLogo}><div className={ItemLogo}></div></div>
-              <p className={module.fp2}>All rights reserved. The content of this application is used for educational purposes only and cannot be used for commercial purposes.</p>
+              <p className={module.fp1}>This application is an audio player designed for personal use and to provide information about the programming level and design abilities of the developer. All rights reserved. The content of this application is used for educational purposes only and cannot be used for commercial purposes.</p>
             </div>
-          </div>
-        </div>
+
+        </div></div>
 
 
       </div>

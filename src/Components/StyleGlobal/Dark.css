@@ -17,8 +17,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  align-content: space-between;
+ 
   align-items: end;
+  justify-items: center;
 }
 .ItemAuthor_d{
   background-image: url(/public/Images/Icon/iconauthor.png);
@@ -116,6 +117,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  display: grid;
+  justify-items: center;
 }
 
 .st_container_d{

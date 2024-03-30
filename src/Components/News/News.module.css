@@ -1,0 +1,27 @@
+.ContNews{
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: inline-flex;
+    background: linear-gradient(180deg, rgba(29, 31, 30, 1) 0%, rgba(13, 13, 13, 1) 100%);
+    color: #fff !important;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Row{
+    margin: 0px 5px;
+    display: grid;
+    gap: 10px;
+}
+.Cell{
+    width: 12.6vw;
+    height: 25vh;
+    background-color: #3271716e;
+    border-radius: 10px;
+    padding: 10px;
+}
