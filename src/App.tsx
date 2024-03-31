@@ -75,7 +75,7 @@ const yourItemsArray = ['Item 1', 'Item 2', 'Item 3', 'Item 1', 'Item 2', 'Item 
         <div className="slides">
           {activeSlide === 0 && <Start />}
           {activeSlide === 1 && <Play />}
-          {activeSlide === 2 && <News items={yourItemsArray}/>}
+          {activeSlide === 2 && <News items={yourItemsArray} count={8} />}
           {activeSlide === 3 && <Ander />}
         </div>
 

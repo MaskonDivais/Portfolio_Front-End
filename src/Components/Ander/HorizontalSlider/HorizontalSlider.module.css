@@ -3,7 +3,7 @@
 .horizontalSliderContainer {
   width: 90vw;
   margin: auto;
-  height: 50vh;
+  height: max-content;
   position: relative;
   overflow: hidden;
   display: grid;

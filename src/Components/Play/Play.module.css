@@ -6,12 +6,49 @@
     background: linear-gradient(180deg, rgba(13,13,13,1) 0%, rgba(29,31,30,1) 100%);
 }
 .fon{
-    
     height: 100vh;
     width: 100%;
-    margin: 0px;    
+    margin: 0px;
+    display: grid;
     padding: 0px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    align-items: center;
+}
+.Track{
+    display: grid;
+    width: calc(50vw - 70px);
+    position: absolute;
+    margin: 0px 0px 0px 70px;
+    justify-items: center;
+    gap: 15px;
+}
+.Previous{
+    width: max-content;
+    background: black;
+    padding: 5px;
+    border: solid 1px #fff;
+    border-radius: 5px;
+
+}
+.PlayPause{
+    width: max-content;
+    background: black;
+    padding: 5px;
+    border: solid 1px #fff;
+    border-radius: 5px;
+}
+.Next{
+    width: max-content;
+    background: black;
+    padding: 5px;
+    border: solid 1px #fff;
+    border-radius: 5px;
+}
+.TrackImage{
+    background: #93939399;
+    height: 40vh;
+    width: 40vh;
+    border-radius: 10px;
 }

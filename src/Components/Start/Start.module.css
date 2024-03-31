@@ -7,15 +7,28 @@
 
 .content{
     display: grid;
-    position: absolute;
+
     margin: 0px;
     padding: 0px;
     width: 75vw;
     height: max-content;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
+}
+.startfon {
+    filter: drop-shadow(23px 10px 3px #00000086);
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: grid;
+    justify-items: center;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+  
 }
 .P1{
     text-align: center;
@@ -33,4 +46,10 @@
 .H1{
     font-family: 'Arkhip', sans-serif;
     font-size: 10vh;
+}
+.H2{
+    font-family: 'Arkhip', sans-serif;
+    font-size: 4vh;
+    width: 100%;
+    margin: 10px 0px;
 }
