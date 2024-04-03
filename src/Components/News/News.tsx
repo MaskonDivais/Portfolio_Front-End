@@ -1,47 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import module from './News.module.css';
 
-interface Props {
-  items: string[]; // Укажите тип элементов массива, если это строки
-  count: number; // Количество элементов, которые нужно отобразить
+interface NewsProps {
+  items: string[];
+  count: number;
 }
 
-const News: React.FC<Props> = ({ items, count }) => {
-  const numRows = Math.ceil(count / 2); // Предполагаем, что таблица будет содержать по 3 элемента в каждой строке
+const News: React.FC<NewsProps> = ({ items, count }) => {
 
-  // Функция для создания ячеек таблицы
-  const renderCells = () => {
-    const cells = [];
+  interface Article {
+    title: string;
+    description: string;
+    url: string;
+    urlToImage: string | null;
+  }
 
-    // Создаем ячейки для каждого элемента
-    for (let i = 0; i < count; i++) {
-      cells.push(
-        <div key={i} className={module.Cell}>
-          {items[i]}
-        </div>
-      );
+  const [news, setNews] = useState<Article[]>([]);
+
+  const fetchNews = async () => {
+    let fetchedNews: Article[] = [];
+    let pageNumber = 1;
+    const pageSize = 8;
+
+    while (fetchedNews.length < pageSize) {
+      var url = `https://newsapi.org/v2/everything?q=music&pageSize=${pageSize}&page=${pageNumber}&sortBy=popularity&apiKey=9f16f226dbd54360aa4faefe09639f15`;
+      var req = new Request(url);
+
+      try {
+        let response = await fetch(req);
+        let data = await response.json();
+
+        // Фильтрация и добавление новостей с изображениями
+        const filteredNews = data.articles.filter((item: Article) => item.urlToImage !== null);
+        fetchedNews = fetchedNews.concat(filteredNews);
+        pageNumber++;
+      } catch (error) {
+        console.error('Ошибка при получении новостей:', error);
+        break;
+      }
     }
 
-    // Добавляем пустые ячейки, чтобы заполнить последний ряд
-    const remainingCells = numRows * 2 - count;
-    for (let i = 0; i < remainingCells; i++) {
-      cells.push(<div key={`empty-${i}`} className="cell empty"></div>);
-    }
+    setNews(fetchedNews.slice(0, pageSize)); // Устанавливаем только первые pageSize новостей
+  }
 
-    return cells;
-  };
+  useEffect(() => {
+    fetchNews();
+  }, []);
 
   return (
     <div className={module.ContNews}>
       <p className={module.TNews}>News</p>
 
-      {/* Создаем строки таблицы */}
-      {Array.from({ length: numRows }, (_, rowIndex) => (
-        <div key={rowIndex} className={module.Row}>
-          {/* Создаем ячейки для каждой строки */}
-          {renderCells().slice(rowIndex * 2, (rowIndex + 1) * 2)}
+      {news.map((item, index) => (
+        <div key={index} className={module.Elem}>
+          {item.urlToImage && <img src={item.urlToImage} className={module.ElemImg} alt="..." />}
+          <h5 className={module.EH5}>{item.title}</h5>
+          <p className={module.EP}>{item.description}</p>
+          <a href={item.url} target="_blank" className={module.ElemURl}>Go Source</a>
         </div>
       ))}
+
     </div>
   );
 };

@@ -36,7 +36,7 @@ const App: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false); 
-    }, 2000); 
+    }, 2); 
   }, []); 
 // End isLoading
 
@@ -48,7 +48,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLettersVisible((prevLettersVisible) => prevLettersVisible + 1);
-    }, 200); 
+    }, 2000); 
     return () => clearTimeout(timer);
   }, [lettersVisible]);
 
