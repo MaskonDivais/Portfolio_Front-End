@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import module from './News.module.css';
 
 interface NewsProps {
-  items: string[];
+
   count: number;
 }
 
-const News: React.FC<NewsProps> = ({ items, count }) => {
+const News: React.FC<NewsProps> = (count) => {
 
   interface Article {
     title: string;
@@ -48,17 +48,22 @@ const News: React.FC<NewsProps> = ({ items, count }) => {
   }, []);
 
   return (
-    <div className={module.ContNews}>
-      <p className={module.TNews}>News</p>
 
-      {news.map((item, index) => (
-        <div key={index} className={module.Elem}>
-          {item.urlToImage && <img src={item.urlToImage} className={module.ElemImg} alt="..." />}
-          <h5 className={module.EH5}>{item.title}</h5>
-          <p className={module.EP}>{item.description}</p>
-          <a href={item.url} target="_blank" className={module.ElemURl}>Go Source</a>
-        </div>
-      ))}
+    <div className={module.Cont}>
+      <div className={module.ContText}>
+        <p className={module.TNews}>News</p>
+      </div>
+      <div className={module.ContNews}>
+        {news.map((item, index) => (
+          <div key={index} className={module.Elem}>
+            {item.urlToImage && <img src={item.urlToImage} className={module.ElemImg} alt="..." />}
+            <h5 className={module.EH5}>{item.title}</h5>
+            <p className={module.EP}>{item.description}</p>
+            <a href={item.url} target="_blank" className={module.ElemURl}>Go Source</a>
+          </div>
+        ))}
+      </div>
+
 
     </div>
   );

@@ -165,10 +165,12 @@
   }
 
 .ButtonAnder{
-  position: fixed;
+  position: relative;
+  display: block;
   z-index: 0;
-  margin: 10px 7px;
+
   bottom: 0px;
+  left: 0px;
 }
 .switch-label{
   display: block;
