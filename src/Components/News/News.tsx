@@ -1,70 +1,67 @@
 import React, { useState, useEffect } from 'react';
+import axios, { AxiosResponse } from 'axios';
 import module from './News.module.css';
+import ElemNews from './Elem/ElemNews';
 
-interface NewsProps {
 
-  count: number;
-}
 
-const News: React.FC<NewsProps> = (count) => {
+const News = () => {
 
   interface Article {
     title: string;
-    description: string;
-    url: string;
-    urlToImage: string | null;
+    urlToImage: string;
+    description: string; 
+    url: string; 
+
   }
 
+  const [loading, setLoading] = useState(true);
   const [news, setNews] = useState<Article[]>([]);
 
-  const fetchNews = async () => {
-    let fetchedNews: Article[] = [];
-    let pageNumber = 1;
-    const pageSize = 8;
 
-    while (fetchedNews.length < pageSize) {
-      var url = `https://newsapi.org/v2/everything?q=music&pageSize=${pageSize}&page=${pageNumber}&sortBy=popularity&apiKey=9f16f226dbd54360aa4faefe09639f15`;
-      var req = new Request(url);
+  async function fetchNews(): Promise<void> {
+    try {
+      var url = 'https://newsapi.org/v2/top-headlines?' +
+        'sources=bbc-news&' +
+        'apiKey=9f16f226dbd54360aa4faefe09639f15';
+      const response = await axios.get<{ articles: Article[] }>(url);
 
-      try {
-        let response = await fetch(req);
-        let data = await response.json();
+      // Фильтруем статьи, оставляем только те, у которых есть изображение
+      const articlesWithImages: Article[] = response.data.articles.filter((item: Article) => item.urlToImage !== null);
 
-        // Фильтрация и добавление новостей с изображениями
-        const filteredNews = data.articles.filter((item: Article) => item.urlToImage !== null);
-        fetchedNews = fetchedNews.concat(filteredNews);
-        pageNumber++;
-      } catch (error) {
-        console.error('Ошибка при получении новостей:', error);
-        break;
+      if (articlesWithImages.length > 0) {
+        setNews(articlesWithImages);
+        setLoading(false);
+        console.log(articlesWithImages);
+      } else {
+        console.log('Новости без изображений не найдены.');
       }
+    } catch (error) {
+      console.error('Error fetching news:', error);
     }
-
-    setNews(fetchedNews.slice(0, pageSize)); // Устанавливаем только первые pageSize новостей
   }
 
-  useEffect(() => {
-    fetchNews();
-  }, []);
+  // useEffect(() => {
+  //   fetchNews();
+  // }, []);
 
   return (
-
     <div className={module.Cont}>
-      <div className={module.ContText}>
-        <p className={module.TNews}>News</p>
-      </div>
+      <div className={module.ContText}><p className={module.TNews}>News</p></div>
+
       <div className={module.ContNews}>
-        {news.map((item, index) => (
-          <div key={index} className={module.Elem}>
-            {item.urlToImage && <img src={item.urlToImage} className={module.ElemImg} alt="..." />}
-            <h5 className={module.EH5}>{item.title}</h5>
-            <p className={module.EP}>{item.description}</p>
-            <a href={item.url} target="_blank" className={module.ElemURl}>Go Source</a>
-          </div>
-        ))}
+        {loading ?
+          <div>loading</div>
+
+          :
+          news.map(newsItem => (
+            <ElemNews news={newsItem} />
+          ))
+        }
+
+
+
       </div>
-
-
     </div>
   );
 };

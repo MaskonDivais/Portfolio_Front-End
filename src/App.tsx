@@ -76,7 +76,7 @@ const App: React.FC = () => {
         <div className="slides">
           {activeSlide === 0 && <Start />}
           {activeSlide === 1 && <Play />}
-          {activeSlide === 2 && <News count={8} />}
+          {activeSlide === 2 && <News/>}
           {activeSlide === 3 && <Ander />}
         </div>
 
