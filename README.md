@@ -1,4 +1,5 @@
-© MASFLEX
+© MASFLEX 
+At the moment, the Project is only available in the 1920 x 1080 Screen extension.
 This repository and everything it contains are intended for use as a MaskonDivais portfolio only. My portfolio includes front-end work including API usage, React JS, Type Script, Java Script and design librarian work.
 This application is a disjointed application without a logical connection of functionality, designed to demonstrate a variety of methods and approaches, including the development of various functionality and work with various technologies. It provides information about the developer's programming level and design abilities. All rights reserved. The content of this application is used for educational purposes only and cannot be used for commercial purposes.
 
