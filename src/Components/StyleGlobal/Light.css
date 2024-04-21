@@ -35,7 +35,7 @@
     z-index: -1;
   }
   .ItemIcon1_w{
-    background-image: url(/public/Images/Icon/iconid_w.png);
+    background-image: url(/public/Images/Icon/Linked.png);
     grid-area: ItemIcon1;
     background-size: contain;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@
     height: auto;
   }
   .ItemIcon3_w{
-    background-image: url(/public/Images/Icon/iconinst_w.png);
+    background-image: url(/public/Images/Icon/Instagram.png);
     grid-area: ItemIcon3;
     background-size: contain;
     background-repeat: no-repeat;
@@ -125,15 +125,14 @@
 
 
 .linked_w{
-  background-image: url(/public/Images/Icon/iconid_w.png);
+  background-image: url(/public/Images/Icon/LinkedD.png);
 }
 .github_w{
   background-image: url(/public/Images/Icon/icongit_w.png);
 }
 .instag_w{
-  background-image: url(/public/Images/Icon/iconinst_w.png);
+  background-image: url(/public/Images/Icon/Instagram.png);
 }
-
 .icon_user_w{
   background-image: url(/public/Images/Icon/user_w.png);
 }

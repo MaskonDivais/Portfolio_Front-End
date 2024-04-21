@@ -1,4 +1,9 @@
-/* Общие стили для .container и body */
+*{
+  -webkit-user-select: none; /* Для Safari */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для Internet Explorer/Edge */
+  user-select: none; /* Стандартное свойство */
+}
 .container {
   display: block;
   position: relative;
@@ -27,7 +32,7 @@ body {
 .navigation-buttons {
   
   height: 100%;
-  width: 5vh;
+  width: 3vw;
   position: fixed;
   display: grid;
   gap: 15px;

@@ -7,6 +7,7 @@ import "../StyleGlobal/Dark.css"
 import "../StyleGlobal/Light.css"
 
 import { useTheme } from '../ThemeContext.js';
+import TecnicalServise from '../../UI/Form/TechnicalService';
 
 const Ander: React.FC = () => {
 
@@ -24,12 +25,21 @@ const Ander: React.FC = () => {
   return (
     <div className={container}>
       <div className={paragraphClass}>
-        <div className={module.ContMap}></div>
+        
+        <div className={module.ContMap}>
+          <TecnicalServise/>
+        </div>
 
         <div className={module.contfooter}><div className={module.footer}>
             <div className={module.Author}><div className={stlAU}/></div>
            
-            <div className={module.Links}></div>
+            <div className={module.Links}>
+              <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconLInked']}`}/><a className={module.A} href="">LinkedIn</a></div>
+              <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconGit']}`}/><a className={module.A} href="">GitHub</a></div>
+              <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconLeet']}`}/><a className={module.A} href="">LeetCode</a></div>
+              <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconInst']}`}/><a className={module.A} href="">Instagram</a></div>
+            </div>
+
             <div className={module.Navi}></div>
             <div className={module.NewItem}></div>
 

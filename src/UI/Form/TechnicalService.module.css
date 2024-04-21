@@ -1,0 +1,158 @@
+.Conteiner{
+    display: block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    border: solid 1px #192f93;
+    border-radius: 30px;
+}
+.ConteinerForm{
+    display: block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 65%;
+    height: -webkit-fill-available;
+    /* border: solid 2px #390053; */
+    border-radius: 30px;
+
+   
+    background-size: contain;
+    background-repeat: no-repeat;
+    background: #181819;
+    z-index: 1;
+}
+.Form{
+    display: grid;
+    position: relative;
+    margin: 0px;
+    padding: 20px;
+    width: auto;
+    height: -webkit-fill-available;
+    align-items: center;
+    align-content: center;    
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "Logotype Logotype"
+        "P1 P1"
+        "P2 P2"
+        "LabelName LabelMail"
+        "LabelProblem LabelProblem"
+        "LabelPriority none"
+        "FormButton FormButton";
+    gap: 10px;
+    font-family: 'Colibri', sans-serif;
+    font-size: 14px;
+    background-size: cover;
+    justify-items: stretch;
+    justify-content: center;
+    
+    background-image: url(/public/Images/form.png);
+}
+.P1{
+    grid-area: P1;
+    font-family: 'Arkhip', sans-serif;
+    font-size: 19px;
+}
+.P2{
+    grid-area: P2;
+}
+.LabelName{
+    font-family: 'Arkhip', sans-serif;
+    grid-area: LabelName;
+    display: grid;
+    gap: 5px;
+}
+.LabelMail{
+    font-family: 'Arkhip', sans-serif;
+    grid-area: LabelMail;
+    display: grid;
+    gap: 5px;
+}
+.LabelProblem{
+    font-family: 'Arkhip', sans-serif;
+    grid-area: LabelProblem;
+    display: grid;
+    gap: 5px;
+}
+.LabelPriority{
+    font-family: 'Arkhip', sans-serif;
+    grid-area: LabelPriority;
+    display: grid;
+    width: 50%;
+    gap: 5px;
+}
+
+.Logotype{
+    grid-area: Logotype;
+    width: 120px;
+    height: 40px;
+    position: relative;
+    left: calc(50% - 60px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/public/Images/Icon/Logo_2s.png);
+}
+.Input{
+    width: auto;
+    height: auto;
+    margin: 5px 0px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: solid 1px #ffffff;
+    background: #ffffff00;
+    color: #ffffff !important;
+}
+.Textarea{
+    resize: none;
+    width: auto;
+    height: auto;
+    margin: 5px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px #ffffff;
+    background: #ffffff00;
+    color: #ffffff !important;
+}
+.LabelSelect{
+    font-family: 'Arkhip', sans-serif;
+    font-size: 13px;
+    background: #181819;
+    border: solid 1px #ffffff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px;
+    
+
+}
+
+
+
+.LabelOption{
+    background: #f7f7f700;
+    border: solid 1px #ffffff;
+}
+
+
+.ConteinerMap{
+    display: block;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 40%;
+    height: 100%;
+    border-radius: 30px;
+
+    top: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+
+
+.map{
+    width: 100%;
+    height: 100%;
+}

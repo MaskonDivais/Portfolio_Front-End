@@ -46,3 +46,46 @@
 .icon:hover {
     filter: brightness(1);
 }
+
+.ConteinerForm{
+    display: grid;
+    justify-items: center;
+}
+.Form{
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.InputSearch{
+    color: #fff;
+    background: #f0f8ff00;
+    border: solid 1px #b2b2b2;
+    border-radius: 15px;
+    padding: 0px 0px 0px 10px;
+    width: 50vw;
+    height: 30px;
+}
+.InputSearch:focus-visible {
+    border: solid 1px #ffffff;
+    outline: none;
+}
+.ButtonSearch{
+    position: absolute;
+    width: 20px;
+    margin: 0px;
+    height: 20px;
+    background: transparent;
+    border: solid 0px #0000;
+    border-radius: 11px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+
+    transform: translate(-30%, -50%);
+    background-image: url(/public/Images/Icon/Search.png);
+    filter: brightness(0.7);
+    transition: all .2s;
+}
+.ButtonSearch:hover{
+    filter: brightness(1);
+}

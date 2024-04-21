@@ -9,7 +9,6 @@
 .fon_d{
   display: grid;
   background-image: url(/public/Images/cont_4_1.png);
-  filter: drop-shadow(23px 10px 3px #00000086);
   height: 100vh;
   width: 100%;
   margin: 0px;
@@ -31,10 +30,10 @@
   top: 25%;
   left: 60%;
   transform: translate(-50%, -50%) rotate(-20deg);
-  z-index: -1;
+  z-index: 0;
 }
 .ItemIcon1_d{
-  background-image: url(/public/Images/Icon/iconid.png);
+  background-image: url(/public/Images/Icon/LinkedD.png);
   grid-area: ItemIcon1;
   background-size: contain;
   background-repeat: no-repeat;
@@ -50,7 +49,7 @@
   height: auto;
 }
 .ItemIcon3_d{
-  background-image: url(/public/Images/Icon/iconinst.png);
+  background-image: url(/public/Images/Icon/Instagram.png);
   grid-area: ItemIcon3;
   background-size: contain;
   background-repeat: no-repeat;
@@ -126,13 +125,13 @@
 
 
 .linked_d{
-  background-image: url(/public/Images/Icon/iconid_w.png);
+  background-image: url(/public/Images/Icon/Linked.png);
 }
 .github_d{
   background-image: url(/public/Images/Icon/icongit_w.png);
 }
 .instag_d{
-  background-image: url(/public/Images/Icon/iconinst_w.png);
+  background-image: url(/public/Images/Icon/Instagram.png);
 }
 
 

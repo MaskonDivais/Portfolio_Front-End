@@ -10,6 +10,8 @@ import Menu from './Components/Menu/Menu';
 import News from './Components/News/News';
 
 const App: React.FC = () => {
+
+
   // Start Scroll
   const nextSlide = () => { setActiveSlide((prevSlide) => (prevSlide + 1) % 4); };
   const prevSlide = () => { setActiveSlide((prevSlide) => (prevSlide - 1 + 4) % 4); };
@@ -71,7 +73,7 @@ const App: React.FC = () => {
     <ThemeProvider>
       <div className="container">
 
-      {isAuthenticated ? null: <Login setIsAuthenticated={setIsAuthenticated} />}
+      {/* {isAuthenticated ? null: <Login setIsAuthenticated={setIsAuthenticated} />} */}
 
         <div className="slides">
           {activeSlide === 0 && <Start />}
@@ -82,7 +84,7 @@ const App: React.FC = () => {
 
         <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
 
-        {isAuthenticated ? <Menu /> : null}
+        {isAuthenticated ? <Menu /> : <Menu />}
 
       </div>
     </ThemeProvider>

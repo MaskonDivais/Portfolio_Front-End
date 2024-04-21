@@ -10,7 +10,7 @@
     background-size: cover;
     background-position: bottom;
     align-content: stretch;
-
+    filter: drop-shadow(23px 10px 3px #00000086);
 }
 .slider{
     height: 65vh;
@@ -84,7 +84,7 @@
         height: auto;
         width: auto;
         border-radius: 10px;
-        background-color: rgba(185, 0, 0, 0.363);
+        background-color: rgb(0 0 0 / 74%);
 }
 .fp1{
     width: 100%;
@@ -93,7 +93,7 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    text-align: justify;
+    text-align: center;
     font-size: 12px;
     background: #7d7d7d29;
 
@@ -124,7 +124,7 @@
     height: 50vh;
     width: 85vw;
     border-radius: 10px;
-    background-color: #361a6463;
+
 }
 
 
@@ -147,15 +147,7 @@
     align-items: center;
     align-content: stretch;
 }
-.Links{
-    grid-area: Links;
-    position: relative;
-    display: block;
-    height: 80%;
-    width: 100%;
-    border-radius: 10px;
-    background-color: rgba(2, 129, 80, 0.322);
-}
+
 .Navi{
     grid-area: Navi;
     position: relative;
@@ -163,7 +155,7 @@
     height: 80%;
     width: 90%;
     border-radius: 10px;
-    background-color: rgba(0, 108, 231, 0.445);
+    background-color: rgb(0 0 0 / 41%);
 }
 .NewItem{
     grid-area: NewItem;
@@ -172,5 +164,59 @@
     height: 80%;
     width: 100%;
     border-radius: 10px;
-    background-color: rgba(8, 0, 128, 0.541);
+    background-color: rgb(0 0 0 / 41%);
+}
+
+
+
+.Links{
+    grid-area: Links;
+    position: relative;
+    display: grid;
+    height: 80%;
+    width: max-content;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: rgb(0 0 0 / 41%);
+    justify-items: start;
+    align-items: center;
+    align-content: center;
+    justify-content: start;
+}
+.ElemLinks{
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 10px;
+    width: max-content;
+    gap: 10px;
+}
+.Icon{
+    width: 25px;
+    height: 25px    ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.7);
+    transition: all .3s;
+}
+.Icon:hover{
+
+    filter: brightness(1);
+}
+.IconLInked{
+    background-image: url(/public/Images/Icon/Linked.png);
+}
+.IconGit{
+    background-image: url(/public/Images/Icon/icongit_w.png);
+}
+.IconLeet{
+    background-image: url(/public/Images/Icon/LeetCode.png);
+}
+.IconInst{
+    background-image: url(/public/Images/Icon/Instagram.png);
+}
+.A{
+    font-family: 'Arkhip', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
 }

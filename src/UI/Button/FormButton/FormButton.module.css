@@ -1,0 +1,21 @@
+.FormButton{
+    grid-area: FormButton;
+    display: block;
+    position: relative;
+    margin: 0px;
+    padding: 7px;
+    width: 120px;
+    height: auto;
+
+    color: rgb(255, 255, 255);
+    background: #ffffff00;
+    font-size: 16px;
+    border-radius: 5px;
+    border: solid 1px #ffffff;
+    transition: all .3s;
+}
+.FormButton:hover{
+    color: rgb(238, 234, 0);
+    background: #ffffff00;
+    border: solid 1px rgb(238, 234, 0);
+}
