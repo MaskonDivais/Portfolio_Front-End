@@ -12,7 +12,7 @@ const TecnicalServise = () => {
         <form className={module.Form}>
 
           <div className={module.Logotype} />
-          <p className={module.P1}>Technical support service :</p>
+          <p className={module.P1}>Technical support service</p>
           <p className={module.P2}>Tell us what roles we have already met and we will try to help you as soon as possible.</p>
 
           <label className={module.LabelName}>Name: <input className={module.Input} type="text" placeholder="User Name"></input></label>

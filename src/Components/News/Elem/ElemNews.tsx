@@ -51,7 +51,7 @@ function truncateDescription(description: string, maxLengthD: number): string {
   }
 }
 // End Function for changing Tile format.
-let maxLength: number = 45;
+let maxLength: number = 55;
 let maxLengthD: number = 185;
 
 const ElemNews: React.FC<ElemNewsProps> = ({ news }) => {

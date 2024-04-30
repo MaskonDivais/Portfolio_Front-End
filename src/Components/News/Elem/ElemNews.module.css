@@ -3,7 +3,7 @@
     grid-template-rows: max-content auto;
     background: #5d5d5d;
     width: 22.5vw;
-    height: 44vh;
+    height: 28.5vh;
     justify-items: start;
     overflow: hidden;
     background-size: cover;
@@ -11,6 +11,7 @@
     align-content: stretch;
     align-items: start;
     justify-content: center;
+    /* box-shadow: 0 0 2px 2px rgb(255 255 255 / 50%); */
     background-image: url(/public/Images/Beground_d.png);
 }
 :root {
@@ -81,7 +82,7 @@
     width: inherit;
     display: block;
     position: absolute;
-    filter: brightness(0.5);
+    filter: brightness(0.6);
     max-width: 100%;
     border-radius: 0px;
     object-fit: cover;
@@ -93,7 +94,7 @@
     font-weight: 300;
     height: 100%;
     width: -webkit-fill-available;
-    font-size: 30px;
+    font-size: 26px;
     padding: 0px 10px 0px 10px;
     background: #2b2b2b00;
     z-index: 1;
@@ -149,7 +150,7 @@
     justify-items: start;
     justify-content: center;
     gap: 10px;
-    grid-template-rows: 32vh 15px max-content 6vh 30px;
+    grid-template-rows: 18vh 15px max-content 6vh 30px;
     grid-template-areas:
     "none"
     "PA"

@@ -18,20 +18,24 @@ const Menu = () => {
 
   return (
     <div className={module.conteiner}>
+      <div className={module.Logo} />
+      <div className={module.lineV2} />
       <AnderButton />
 
-      
+
       <div className={module.ConteinerForm}>
         <form className={module.Form} action="search_results.html" method="GET">
           <input className={module.InputSearch} type="text" name="q" placeholder="Search"></input>
-          <button className={module.ButtonSearch} type="submit"/>
+          <button className={module.ButtonSearch} type="submit" />
         </form>
       </div>
 
+      <div className={module.IconList}>
+        <div className={module.Out}><div className={`${git} ${module['icon']}`} /></div>
+        <div className={module.Out}><div className={`${lin} ${module['icon']}`} /></div>
+        <div className={module.Out}><div className={`${ins} ${module['icon']}`} /></div>
+      </div>
 
-      <div className={`${git} ${module['icon']}`} />
-      <div className={`${lin} ${module['icon']}`} />
-      <div className={`${ins} ${module['icon']}`} />
 
       <div className={module.lineV2} />
 

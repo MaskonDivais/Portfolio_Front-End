@@ -1,4 +1,4 @@
-.fon{
+.fon {
     display: grid;
     background-image: url(/public/Images/cont_4_1.png);
     filter: drop-shadow(23px 10px 3px #00000086);
@@ -12,7 +12,8 @@
     align-content: stretch;
     filter: drop-shadow(23px 10px 3px #00000086);
 }
-.slider{
+
+.slider {
     height: 65vh;
     width: 100%;
     display: grid;
@@ -20,7 +21,8 @@
     margin: 0px;
     padding: 0px;
 }
-.contfooter{
+
+.contfooter {
     background: #4140401f;
     display: grid;
     justify-items: center;
@@ -31,7 +33,7 @@
 }
 
 
-.ContButton{
+.ContButton {
     grid-area: ContButton;
     display: grid;
     align-items: center;
@@ -40,13 +42,15 @@
     top: 5%;
     transform: translate(-0%, -0%);
 }
-.Author{
+
+.Author {
     grid-area: Author;
     display: grid;
     align-items: center;
     justify-items: center;
 }
-.FIcon{
+
+.FIcon {
     grid-template-columns: auto auto auto;
     grid-template-rows: 5vh auto;
     grid-area: FIcon;
@@ -61,11 +65,11 @@
     justify-items: center;
     position: absolute;
     top: 5%;
-    transform: translate(-0%, -0%); 
-} 
+    transform: translate(-0%, -0%);
+}
 
 
-.fp3{
+.fp3 {
     font-family: 'Arkhip', sans-serif;
     grid-area: fp3;
     display: grid;
@@ -74,19 +78,24 @@
     text-align: justify;
     font-size: 12px;
 }
-.ContCopi{
+
+.ContCopi {
     position: absolute;
     grid-area: ContCopi;
     display: grid;
     grid-template-areas:
         "FooterLogo fp1"
         "FooterLogo fp2";
-        height: auto;
-        width: auto;
-        border-radius: 10px;
-        background-color: rgb(0 0 0 / 74%);
+    height: auto;
+
+    width: 85%;
+    border-radius: 10px;
+    background-color: rgb(0 0 0 / 41%);
+ 
 }
-.fp1{
+
+.fp1 {
+    padding: 3px;
     width: 100%;
     font-family: 'Arkhip', sans-serif;
     grid-area: fp1;
@@ -95,10 +104,11 @@
     justify-items: center;
     text-align: center;
     font-size: 12px;
-    background: #7d7d7d29;
+    
 
 }
-.fp2{
+
+.fp2 {
     width: 100%;
     font-family: 'Arkhip', sans-serif;
     grid-area: fp2;
@@ -111,14 +121,15 @@
     margin: 0px 5px 5px 5px;
     padding: 0.5vh;
 }
-.FooterLogo{
+
+.FooterLogo {
     grid-area: FooterLogo;
     display: grid;
     justify-items: center;
     align-items: center;
 }
 
-.ContMap{
+.ContMap {
     display: block;
     position: relative;
     height: 50vh;
@@ -128,36 +139,37 @@
 }
 
 
-.footer{
+.footer {
     height: 95%;
     width: 85vw;
     position: relative;
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-template-columns: 20% 30% 50%;
-    grid-template-rows: 85% 10% 0px;
+    grid-template-columns: max-content max-content 70%;
+    grid-template-rows: 80% 5% 0px;
     grid-template-areas:
         "Links Navi NewItem"
         "ContCopi ContCopi ContCopi"
         "Author Author Author";
     justify-content: center;
-    gap: 0px;
+    gap: 10px;
     justify-items: center;
     align-items: center;
     align-content: stretch;
 }
 
-.Navi{
+.Navi {
     grid-area: Navi;
     position: relative;
     display: block;
     height: 80%;
-    width: 90%;
+    width: max-content;
     border-radius: 10px;
     background-color: rgb(0 0 0 / 41%);
 }
-.NewItem{
+
+.NewItem {
     grid-area: NewItem;
     position: relative;
     display: block;
@@ -169,7 +181,7 @@
 
 
 
-.Links{
+.Links {
     grid-area: Links;
     position: relative;
     display: grid;
@@ -183,38 +195,54 @@
     align-content: center;
     justify-content: start;
 }
-.ElemLinks{
+
+.ElemLinks {
     display: inline-flex;
     align-items: center;
-    padding: 0px 10px;
-    width: max-content;
+    padding: 3px 10px;
+    margin: 0px 10px;
+    width: -webkit-fill-available;
     gap: 10px;
+    border-radius: 5px;
+    transition: all .3s;
 }
-.Icon{
+
+.ElemLinks:hover {
+
+    background: #333333;
+}
+
+.Icon {
     width: 25px;
-    height: 25px    ;
+    height: 25px;
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(0.7);
     transition: all .3s;
 }
-.Icon:hover{
+
+.Icon:hover {
 
     filter: brightness(1);
 }
-.IconLInked{
+
+.IconLInked {
     background-image: url(/public/Images/Icon/Linked.png);
 }
-.IconGit{
+
+.IconGit {
     background-image: url(/public/Images/Icon/icongit_w.png);
 }
-.IconLeet{
+
+.IconLeet {
     background-image: url(/public/Images/Icon/LeetCode.png);
 }
-.IconInst{
+
+.IconInst {
     background-image: url(/public/Images/Icon/Instagram.png);
 }
-.A{
+
+.A {
     font-family: 'Arkhip', sans-serif;
     font-size: 15px;
     text-decoration: none;

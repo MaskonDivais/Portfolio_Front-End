@@ -9,28 +9,26 @@
     border-radius: 30px;
 }
 .ConteinerForm{
-    display: block;
+    display: grid;
     position: relative;
     margin: 0px;
     padding: 0px;
     width: 65%;
     height: -webkit-fill-available;
-    /* border: solid 2px #390053; */
     border-radius: 30px;
-
-   
-    background-size: contain;
-    background-repeat: no-repeat;
-    background: #181819;
+    justify-items: center;
+    align-items: center;
     z-index: 1;
+    background: url(/public/Images/Forma.png) no-repeat center center/cover;
+    
 }
 .Form{
     display: grid;
     position: relative;
     margin: 0px;
-    padding: 20px;
-    width: auto;
-    height: -webkit-fill-available;
+    padding: 1% 5%;
+    width: max-content;
+    height: 90%;
     align-items: center;
     align-content: center;    
     grid-template-columns: auto auto;
@@ -48,13 +46,18 @@
     background-size: cover;
     justify-items: stretch;
     justify-content: center;
+    border-radius: 30px;
+    background-color: #0000004a;
+    /* background: url(/public/Images/form.png) no-repeat center center/cover; */
+   
+
     
-    background-image: url(/public/Images/form.png);
 }
 .P1{
     grid-area: P1;
     font-family: 'Arkhip', sans-serif;
     font-size: 19px;
+    text-align: center;
 }
 .P2{
     grid-area: P2;
@@ -119,7 +122,7 @@
 .LabelSelect{
     font-family: 'Arkhip', sans-serif;
     font-size: 13px;
-    background: #181819;
+    background: #ffffff00;
     border: solid 1px #ffffff;
     color: #fff;
     border-radius: 5px;
@@ -131,7 +134,7 @@
 
 
 .LabelOption{
-    background: #f7f7f700;
+    background: #474747e1;
     border: solid 1px #ffffff;
 }
 

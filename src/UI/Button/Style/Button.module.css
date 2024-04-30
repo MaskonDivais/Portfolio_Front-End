@@ -8,18 +8,26 @@
 }
 
 .log{
-    height: 2.7vh;
-    width: 2.7vh;
-    margin: 0px;    
+    height: 2.1vh;
+    width: 2.1vh;
+    margin: 5px;
     padding: 0px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom;
-    transition: all 0.2s;
-    filter: brightness(0.7);
-}
+    background-position: center bottom;
 
-.log:hover {
+}
+.Out{
+    filter: brightness(0.7);
+    border-radius: 3px;
+    width: auto;
+    padding: 2px 4px;
+    height: auto;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease 0s;
+}
+.Out:hover {
+    background: #4d4d4d9a;
     filter: brightness(1);
 }
 .p{

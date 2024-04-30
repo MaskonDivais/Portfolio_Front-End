@@ -9,7 +9,7 @@ const LogIn = () => {
   const login = isDarkTheme ? 'login_w' : 'login_d';
 
   return (
-    <div className={`${login} ${module['log']}`}/>
+    <div className={module.Out}><div className={`${login} ${module['log']}`}/></div>
   );
 };
 

@@ -8,6 +8,7 @@ import "../StyleGlobal/Light.css"
 
 import { useTheme } from '../ThemeContext.js';
 import TecnicalServise from '../../UI/Form/TechnicalService';
+import Weather from '../../APIs/API-Weather/Weather';
 
 const Ander: React.FC = () => {
 
@@ -40,11 +41,11 @@ const Ander: React.FC = () => {
               <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconInst']}`}/><a className={module.A} href="">Instagram</a></div>
             </div>
 
-            <div className={module.Navi}></div>
+            <div className={module.Navi}><Weather/></div>
             <div className={module.NewItem}></div>
 
             <div className={module.ContCopi}>
-              <p className={module.fp1}>This application is an audio player designed for personal use and to provide information about the programming level and design abilities of the developer. All rights reserved. The content of this application is used for educational purposes only and cannot be used for commercial purposes.</p>
+              <p className={module.fp1}>&copy; MasFlex. This application is an audio player designed for personal use and to provide information about the programming level and design abilities of the developer. All rights reserved. The content of this application is used for educational purposes only and cannot be used for commercial purposes.</p>
             </div>
 
         </div></div>

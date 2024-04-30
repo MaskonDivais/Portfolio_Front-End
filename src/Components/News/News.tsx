@@ -16,7 +16,7 @@ const News: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [news, setNews] = useState<Article[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const postsPerPage = 8;
+  const postsPerPage = 12;
 
   useEffect(() => {
     const fetchNews = async () => {
