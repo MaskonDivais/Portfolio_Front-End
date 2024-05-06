@@ -142,3 +142,6 @@
   background-image: url(/public/Images/Icon/password_w.png);
 }
 
+.icon_telephone{
+  background: url(/public/Images/Icon/Phone.png) no-repeat center center / cover;
+}

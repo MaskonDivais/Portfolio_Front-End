@@ -39,7 +39,7 @@
     padding: 5px;
     margin: 0px;
     border-width: 1px;
-    line-height: 3.2vh;
+    line-height: 3vh;
     border-radius: 5px;
     border-color: #ffffff;
     border-style: solid;
@@ -56,7 +56,7 @@
     padding: 5px;
     margin: 0px;
     border-width: 1px;
-    line-height: 3.2vh;
+    line-height: 3vh;
     border-radius: 5px;
     border-color: #ffffff;
     border-style: solid;
@@ -69,7 +69,7 @@
 
 .form{
     position: absolute;
-    display: grid;
+    display: inline-flex;
     margin: 0px;
     padding: 0px;
     width: 935px;
@@ -81,16 +81,15 @@
     background: #1a1a1a;
     filter: none !important;
 }
-.conteiner_form{
+.ContFormSecond{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto max-content max-content max-content auto;
+    grid-template-rows: max-content max-content max-content;
     grid-template-areas:
         "ContUp"
-        "ContLogWith"
-        "OR"
         "ContItem"
         "ContLow";
+    width: 100%;
     gap: 2vh;
     justify-items: center;
     align-items: center;
@@ -98,9 +97,39 @@
     background-size: auto;
     background-position: center;
     overflow: hidden;
-    align-content: center;
+    padding: 3rem 0px;
+    align-content: space-between;
+
+    background-image: url(/public/Images/Beground_d.png);    
+}
+    
+.conteiner_form{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-areas:
+        "ContUp"
+        "ContItem"
+        "ContLow";
+    width: 50%;
+    gap: 2vh;
+    justify-items: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    overflow: hidden;
+    padding: 3rem 0px;
+    align-content: space-between;
     background-image: url(/public/Images/Beground_d.png);    
     
+}
+.ContWith{
+    display: grid;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #1a1a1a;
 }
 .ContUp{
     grid-area: ContUp;
@@ -133,10 +162,14 @@
     display: grid;
     grid-template-columns: auto;
     gap: 10px;
-    width: 36.5%;
+    height: max-content;
+    width: max-content;
     background: #89898936;
     border-radius: 10px;
     padding: 10px;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: center;
 }
 .OR{
     grid-area: OR;
@@ -146,7 +179,7 @@
 
 .ContItAll{
     display: grid;
-    gap: 2vh;
+    gap: 1.5vh;
     grid-area: ContItem;
     background: #89898936;
     border-radius: 10px;
@@ -178,6 +211,8 @@
     gap: 10px;
 
 }
+
+
 .ContLow{
     grid-area: ContLow;
     display: grid;
@@ -209,22 +244,22 @@
 
 .icon_user{
     grid-area: thN;
-    height: 4vh;
-    width: 4vh;
+    height: 3.5vh;
+    width: 3.5vh;
     margin: 0px;    
     padding: 0px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: bottom;
 }
 .icon_pass{
     grid-area: thP;
-    height: 4vh;
-    width: 4vh;
+    height: 3.5vh;
+    width: 3.5vh;
     margin: 0px;    
     padding: 0px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: bottom;
 }
 .cont_text{
@@ -348,7 +383,7 @@
     transition: all 0.3s;
 }
 .TI:hover{
-    color: #ebc801;
+    color: #00d4ed;
 }
 .TL{
     font-size: 12px;
@@ -356,5 +391,85 @@
     transition: all 0.3s;
 }
 .TL:hover{
-    color: #ebc801;
+    color: #00d4ed;
+}
+
+
+
+.ConteinerFonFirst{
+    display: grid;
+    width: 50%;
+    justify-items: center;
+    align-items: center;
+    background: url(/public//Images/Forma.jpg) no-repeat center center / cover;
+}
+.ConteinerFonSecond{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    background: url(/public//Images/Forma.jpg) no-repeat center center / cover;
+}
+
+.ContFormHiden{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-areas:
+        "ContUp"
+        "ContLogWith"
+        "ContLow";
+    width: 100%;
+    gap: 2vh;
+    justify-items: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    overflow: hidden;
+    padding: 3rem 0px;
+    align-content: space-between;
+
+    background-image: url(/public/Images/Beground_d.png);    
+}
+.ContItem3{
+
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "thP form_telephone";
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+   
+
+}
+.icon_telephone{
+    grid-area: thP;
+    height: 3.5vh;
+    width: 3.5vh;
+    margin: 0px;
+    padding: 0px;
+  
+    background-position: bottom;
+    background: url(/public/Images/Icon/PhoneBorder.png ) no-repeat center center / contain;
+}
+.form_telephone{
+    grid-area: form_telephone;
+    display: block;
+    width: 278px;
+    padding: 5px;
+    margin: 0px;
+    border-width: 1px;
+    line-height: 3vh;
+    border-radius: 5px;
+    border-color: #ffffff;
+    border-style: solid;
+    color: white;
+    background: rgb(0 0 0 / 33%);
+    font-family: 'Jura', sans-serif;
+    outline: none;
+    transition: all 0.3s ease-in-out;
 }

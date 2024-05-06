@@ -64,19 +64,22 @@ const ElemNews: React.FC<ElemNewsProps> = ({ news }) => {
       animate={{
         x: 0,
         y: 0,
-        scale: 1,
+        
         rotate: 0,
       }}
       className={module.ContOver}
       whileHover={{ 
-        y: -100
+        y: -100,
+        
       }}
     >
 
       <p className={module.PA}>{news.author}</p>
       <h5 className={module.EH5}>{truncateTitle(news.title, maxLength)}</h5>
+
       <p className={module.EP}>{truncateTitle(news.description, maxLengthD)}</p>
       <a href={news.url} target="_blank" rel="noopener noreferrer" className={module.ElemURl}>Go Source</a>
+      
       </motion.div>
     </div>
   );

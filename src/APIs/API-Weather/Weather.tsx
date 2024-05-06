@@ -16,40 +16,40 @@ interface WeatherData {
 const Weather: React.FC = () => {
 
   const [data, setData] = useState<WeatherData>({});
-  const [weatherFetched, setWeatherFetched] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if ("geolocation" in navigator) {
-          navigator.geolocation.getCurrentPosition(async (position) => {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-  
-            
-            const locationResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=21e35559e35694a23a1d86db5ab07e71`);
-
-            const cityName = formatCityName(locationResponse.data.name);
-  
-            const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=21e35559e35694a23a1d86db5ab07e71`);
-  
-            setData(weatherResponse.data);
-            setWeatherFetched(true); 
-            console.log("Response...");
-          });
+        const storedWeatherData = localStorage.getItem('weatherData');
+        if (storedWeatherData) {
+          setData(JSON.parse(storedWeatherData));
         } else {
-          console.log("Geolocation is not available...");
+          if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(async (position) => {
+              const latitude = position.coords.latitude;
+              const longitude = position.coords.longitude;
+
+              const locationResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=21e35559e35694a23a1d86db5ab07e71`);
+
+              const cityName = formatCityName(locationResponse.data.name);
+
+              const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=21e35559e35694a23a1d86db5ab07e71`);
+
+              setData(weatherResponse.data);
+              localStorage.setItem('weatherData', JSON.stringify(weatherResponse.data));
+              console.log("Response...");
+            });
+          } else {
+            console.log("Geolocation is not available...");
+          }
         }
       } catch (error) {
         console.error('Error fetching weather data:', error);
       }
     };
-  
-    if (!weatherFetched) {
-      fetchData();
-    }
-  }, [weatherFetched]);
 
+    fetchData();
+  }, []);
 
   const fahrenheitToCelsius = (fahrenheit: number) => {
     return (fahrenheit - 32) * (5/9);
@@ -79,15 +79,15 @@ const Weather: React.FC = () => {
             <div className={module.Bottom}>
               <div className={module.Feels}>
                 {data.main ? <p className={module.Bold}>{fahrenheitToCelsius(data.main.feels_like).toFixed()}°C</p> : null}
-                <p className={module.P}>Feels Like</p>
+                <p className={module.P}>FEELS</p>
               </div>
               <div className={module.Humidity}>
                 {data.main ? <p className={module.Bold}>{data.main.humidity}%</p> : null}
-                <p className={module.P}>Humidity</p>
+                <p className={module.P}>HUMIDITY</p>
               </div>
               <div className={module.Wind}>
                 {data.wind ? <p className={module.Bold}>{data.wind.speed.toFixed()} MPH</p> : null}
-                <p className={module.P}>Wind Speed</p>
+                <p className={module.P}>WIND</p>
               </div>
             </div>
           }

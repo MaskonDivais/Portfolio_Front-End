@@ -32,7 +32,7 @@ body {
 .navigation-buttons {
   
   height: 100%;
-  width: 3vw;
+  width: 50px;
   position: fixed;
   display: grid;
   gap: 15px;

@@ -1,6 +1,7 @@
 import React from 'react'
 import module from "./TechnicalService.module.css"
 import FormButtom from '../Button/FormButton/FormButtom'
+import Map from '../../APIs/API-Map/Map'
 
 
 const TecnicalServise = () => {
@@ -33,11 +34,9 @@ const TecnicalServise = () => {
         </form>
       </div>
       <div className={module.ConteinerMap}>
-        
-        {/* <iframe className={module.map} src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBOiK2HxErNkqvJxLnU5hp-AlxcXLoMn0g
-        &center=-33.8569,151.2152
-        &zoom=18" 
-        allowfullscreen=""></iframe> */}
+
+
+        <Map/>
 
       </div>
     </div>

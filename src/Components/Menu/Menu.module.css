@@ -14,13 +14,13 @@ input::placeholder {
     align-content: center;
     align-items: center;
     position: fixed;
-    gap: 0.5rem;
+    gap: 0.2rem;
     margin: 0px;
     width: 100vw;
     height: 5vh;
     right: 0px;
     top: 0px;
-    background: linear-gradient(280deg, #361a6485 0%, #20328e63 100%);
+    background: linear-gradient(280deg, #361a64a1 0%, #20328ebf 100%);
     z-index: 2;
     padding:  0px 0.3rem 0px 0.8rem;
     box-sizing: border-box;
@@ -31,7 +31,7 @@ input::placeholder {
 .Logo{
     height: 2.1vh;
     width: 2.1vh;
-    margin: 0px;
+    margin: 0px 0.5rem 0px 0px;
     padding: 0px;
     background: url(/public/Images/Icon/MenuLogo.png);
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@ input::placeholder {
 .InputSearch{
     color: #fff;
     background: #f0f8ff00;
-    border: solid 1px #b2b2b2;
+    border: solid 1px #707070;
     border-radius: 15px;
     padding: 0px 0px 0px 10px;
     width: 50vw;

@@ -1,0 +1,16 @@
+.Conteiner {
+    width: 210px;
+    height: 43px;
+    border: solid 1px #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(160deg, rgb(52 28 101) 0%, rgb(32 50 142) 100%);
+    position: relative;
+    transition: all .3s;
+}
+
+.Conteiner:hover {
+    color: #00d4ed;
+    border: solid 1px #00d4ed;
+    background: linear-gradient(160deg, rgb(32 50 142) 0%, rgb(52 28 101) 100%);
+}

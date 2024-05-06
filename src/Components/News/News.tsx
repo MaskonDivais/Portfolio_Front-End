@@ -19,30 +19,35 @@ const News: React.FC = () => {
   const postsPerPage = 12;
 
   useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const url = `https://newsapi.org/v2/everything?q=music%20AND%20(image%20OR%20photo%20OR%20picture%20OR%20photograph)&language=en&pageSize=100&sortBy=relevancy&apiKey=9f16f226dbd54360aa4faefe09639f15`;
-        const response = await axios.get<{ articles: Article[] }>(url);
+    const storedNews = localStorage.getItem('savedNews');
+    if (storedNews) {
+      setNews(JSON.parse(storedNews));
+      setLoading(false);
+    } else {
+      const fetchNews = async () => {
+        try {
+          const url = `https://newsapi.org/v2/everything?q=music%20AND%20(image%20OR%20photo%20OR%20picture%20OR%20photograph)&language=en&pageSize=100&sortBy=relevancy&apiKey=9f16f226dbd54360aa4faefe09639f15`;
+          const response = await axios.get<{ articles: Article[] }>(url);
 
-        // Фильтруем статьи, оставляем только те, у которых есть изображение
-        const articlesWithImages: Article[] = response.data.articles.filter((item: Article) => item.urlToImage !== null);
+          // Фильтруем статьи, оставляем только те, у которых есть изображение
+          const articlesWithImages: Article[] = response.data.articles.filter((item: Article) => item.urlToImage !== null);
+          console.log('Response...');
 
-        if (articlesWithImages.length > 0) {
-          setNews(articlesWithImages);
-          setLoading(false);
-          // console.log(response.data);
-        } else {
-          console.log('Новости без изображений не найдены.');
+          if (articlesWithImages.length > 0) {
+            setNews(articlesWithImages);
+            localStorage.setItem('savedNews', JSON.stringify(articlesWithImages));
+            setLoading(false);
+          } else {
+            console.log('Новости без изображений не найдены.');
+          }
+        } catch (error) {
+          console.error('Error fetching news:', error);
         }
-      } catch (error) {
-        console.error('Error fetching news:', error);
-      }
-    };
+      };
 
-    fetchNews();
-    
+      fetchNews();
+    }
   }, []);
-
 
   // Получаем индекс первой и последней новости на текущей странице
   const indexOfLastPost = currentPage * postsPerPage;

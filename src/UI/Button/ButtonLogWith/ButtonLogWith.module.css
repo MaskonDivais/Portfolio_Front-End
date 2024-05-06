@@ -1,0 +1,18 @@
+.Conteiner {    
+    position: relative;
+    background-color: #212121b5;
+    border: solid 1px #ffffff00;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    transition: all 0.3s;
+    color: inherit;
+    cursor: pointer;
+}
+
+.Conteiner:hover {
+    color: #00d4ed;
+    border: solid 1px #00d4ed;
+    background-color: #0f0f0fb5;
+}

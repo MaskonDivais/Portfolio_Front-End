@@ -84,7 +84,7 @@ const App: React.FC = () => {
 
         <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
 
-        {isAuthenticated ? <Menu /> : <Menu />}
+        {isAuthenticated ? <Menu /> : <Menu /> }
 
       </div>
     </ThemeProvider>
