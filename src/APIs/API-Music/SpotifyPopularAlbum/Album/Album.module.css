@@ -1,0 +1,27 @@
+.Container{
+    border: 2px solid;
+    width: 20vw;
+    border-radius: 10px;
+    
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 1rem;
+    animation: borderAnimation 2s infinite alternate;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-image: linear-gradient(45deg, #00c3ff, #0353ff) 1;
+    }
+    100% {
+        border-image: linear-gradient(45deg, #800075, #ff00bf) 1;
+    }
+}
+
+.StyleImg{
+    width: calc((100vw - 130px - 6rem)  / 7);
+}
+.StyleP{
+    font-family: 'Arkhip', sans-serif;
+    font-size: 16px;
+}

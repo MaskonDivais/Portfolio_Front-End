@@ -5,6 +5,7 @@ import { useTheme } from '../ThemeContext';
 import "../StyleGlobal/Dark.css"
 import "../StyleGlobal/Light.css"
 import HorizontalSlider from '../Ander/HorizontalSlider/HorizontalSlider';
+import SpotifyPopularAlbum from '../../APIs/API-Music/SpotifyPopularAlbum/SpotifyPopularAlbum'
 
 const Start = () => {
   const { isDarkTheme } = useTheme();
@@ -21,9 +22,9 @@ const Start = () => {
             <p className={module.P1}>This application is an audio player designed for personal use and to provide information about the programming level and design abilities of the developer. All rights reserved. The content of this application is used for educational purposes only and cannot be used for commercial purposes.</p>
           </div>
 
-          <div>
-            <h1 className={module.H2}>Popular Albums this "Year" :</h1>
-            <HorizontalSlider/>
+          <div className={module.ContainerPopularList}>
+            <h1 className={module.H2}>Popular Albums</h1>
+            <SpotifyPopularAlbum/>
           </div>
 
         </div>

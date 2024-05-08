@@ -20,7 +20,7 @@ const Weather: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const storedWeatherData = localStorage.getItem('weatherData');
+        const storedWeatherData = sessionStorage.getItem('weatherData');
         if (storedWeatherData) {
           setData(JSON.parse(storedWeatherData));
         } else {
@@ -36,7 +36,7 @@ const Weather: React.FC = () => {
               const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=21e35559e35694a23a1d86db5ab07e71`);
 
               setData(weatherResponse.data);
-              localStorage.setItem('weatherData', JSON.stringify(weatherResponse.data));
+              sessionStorage.setItem('weatherData', JSON.stringify(weatherResponse.data));
               console.log("Response...");
             });
           } else {

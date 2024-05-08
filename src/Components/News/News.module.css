@@ -84,6 +84,7 @@
 
 .PageElem{
     font-family: 'Arkhip', sans-serif;
+    border: solid 1px #ffffff00;
     color: #fff;
     display: grid;
     border-radius: 20px;
@@ -103,8 +104,11 @@
     
 }
 .PageElemActive{
-    color: #000000;
-    background-color: #00d4ed;
+       color: #00d4ed;
+    background-color: rgb(39, 39, 39);
+    border: solid 1px #00d4ed;
+    /* color: #000000;
+    background-color: #00d4ed; */
     
     font-family: 'Arkhip', sans-serif;
     display: grid;

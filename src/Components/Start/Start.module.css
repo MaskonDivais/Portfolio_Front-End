@@ -47,6 +47,14 @@
     font-family: 'Arkhip', sans-serif;
     font-size: 10vh;
 }
+
+
+.ContainerPopularList{
+    position: relative;
+    display: grid;
+    width: calc(100vw - 100px);
+    height: 50vh;
+}
 .H2{
     font-family: 'Arkhip', sans-serif;
     font-size: 4vh;

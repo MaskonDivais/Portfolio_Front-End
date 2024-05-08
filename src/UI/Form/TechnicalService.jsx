@@ -1,7 +1,7 @@
 import React from 'react'
 import module from "./TechnicalService.module.css"
 import FormButtom from '../Button/FormButton/FormButtom'
-import Map from '../../APIs/API-Map/Map'
+
 
 
 const TecnicalServise = () => {
@@ -33,10 +33,22 @@ const TecnicalServise = () => {
 
         </form>
       </div>
-      <div className={module.ConteinerMap}>
-
-
-        <Map/>
+      <div className={module.ConteinerQuestion}>
+        <div className={module.Question}>
+          <p className={module.FAQ}>Frequently Asked Questions</p>
+          <ul className={module.ListQuestion}>
+            <li className={module.liQ}>Configure playback on multiple devices?</li>
+            <li className={module.liQ}>Download songs for offline listening?</li>
+            <li className={module.liQ}>Set up notifications for new releases?</li>
+            <li className={module.liQ}>Share a song or playlist with friends?</li>
+            <li className={module.liQ}>Find a song or artist by keyword?</li>
+            <li className={module.liQ}>Adjust audio playback quality?</li>
+            <li className={module.liQ}>Create your own playlist?</li>
+            <li className={module.liQ}>Manage playback queue?</li>
+            <li className={module.liQ}>Add a song to a playlist?</li>
+            <li className={module.liQ}>Use the radio feature?</li>
+          </ul>
+        </div>
 
       </div>
     </div>
