@@ -21,12 +21,13 @@ const Menu = () => {
       <div className={module.Logo} />
       <div className={module.lineV2} />
       <AnderButton />
+      <div className={module.lineV2} />
 
 
       <div className={module.ConteinerForm}>
         <form className={module.Form} action="search_results.html" method="GET">
           <input className={module.InputSearch} type="text" name="q" placeholder="Search"></input>
-          <button className={module.ButtonSearch} type="submit" />
+          <div className={module.OutB}><button className={module.ButtonSearch} type="submit" /></div>
         </form>
       </div>
 

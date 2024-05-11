@@ -21,14 +21,6 @@ const TecnicalServise = () => {
 
           <label className={module.LabelProblem}>Problem: <textarea name="user_message" required className={module.Textarea} cols={50} id="message" rows={5}></textarea></label>
 
-          <label className={module.LabelPriority} >Priority:
-            <select className={module.LabelSelect} id="Priority" name="Priority">
-              <option className={module.LabelOption} value="Urgently">Urgently</option>
-              <option className={module.LabelOption} value="Standard">Standard</option>
-              <option className={module.LabelOption} value="Leisurely">Leisurely</option>
-            </select>
-          </label>
-
           <FormButtom />
 
         </form>

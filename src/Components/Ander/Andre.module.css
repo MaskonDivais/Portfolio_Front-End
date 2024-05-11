@@ -83,22 +83,24 @@
     grid-area: ContCopi;
     position: absolute;
     padding: 5px 10px;
-    
     display: grid;
     grid-template-areas:
         "FooterLogo fp1"
         "FooterLogo fp2";
     height: auto;
-
-    width: 85%;
+    width: 98.5%;
     border-radius: 10px;
-    background-color: rgb(0 0 0 / 41%);
- 
+    filter: brightness(0.7);
+    transition: all 0.3s;
+}
+
+.ContCopi:hover {
+    filter: brightness(1);
 }
 
 .fp1 {
     padding: 0px;
-    
+
     width: 100%;
     font-family: 'Arkhip', sans-serif;
     grid-area: fp1;
@@ -107,8 +109,8 @@
     justify-items: center;
     text-align: center;
     font-size: 12px;
-    color: #bdbdbd;
-    
+    color: #ffffff;
+
 
 }
 
@@ -134,11 +136,13 @@
 }
 
 .ContMap {
-    display: block;
-    position: relative;
-    height: 50vh;
-    width: 85vw;
+    display: grid;
+    height: 65vh;
+    width: 100vw;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background: url(/public/Images/form.png) no-repeat center center / cover;
 
 }
 
@@ -150,10 +154,10 @@
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-template-columns: max-content max-content 70%;
+    grid-template-columns: max-content 70% max-content;
     grid-template-rows: 80% 5% 0px;
     grid-template-areas:
-        "Links Navi NewItem"
+        "Navi NewItem Links"
         "ContCopi ContCopi ContCopi"
         "Author Author Author";
     justify-content: center;
@@ -175,12 +179,14 @@
 
 .NewItem {
     grid-area: NewItem;
-    position: relative;
+    position: absolute;
+
     display: block;
     height: 80%;
     width: 100%;
     border-radius: 10px;
     background-color: rgb(0 0 0 / 41%);
+
 }
 
 

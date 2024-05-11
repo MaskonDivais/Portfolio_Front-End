@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: aquamarine;
+  background-color: #161a17;
   margin: 0px;
   padding: 0px;
   overflow: hidden;
@@ -81,7 +81,7 @@ body {
 
 .navigation-buttons .active .gradient-element {
   border-image: linear-gradient(90deg, #039 0%, #00d4ed 100%)1;
-  animation: rotat 1s ease-in;
+  /* animation: rotat 1s ease-in; */
   animation-iteration-count: infinite;
 }
 

@@ -49,12 +49,11 @@ const News: React.FC = () => {
     }
   }, []);
 
-  // Получаем индекс первой и последней новости на текущей странице
+  
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = news.slice(indexOfFirstPost, indexOfLastPost);
 
-  // Переключаем страницу
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (

@@ -1,27 +1,44 @@
-.Container{
+.Container {
+    display: grid;
     border: 2px solid;
     width: 20vw;
+    height: max-content;
     border-radius: 10px;
-    
+    position: relative;
     text-align: center;
     font-size: 24px;
     margin-bottom: 1rem;
-    animation: borderAnimation 2s infinite alternate;
+    border-image: linear-gradient(45deg, #00c3ff, #0353ff) 1;
+    filter: brightness(0.8);
+    transition: all 0.3s;
+}
+.Container:hover {
+    filter: brightness(1);
 }
 
-@keyframes borderAnimation {
-    0% {
-        border-image: linear-gradient(45deg, #00c3ff, #0353ff) 1;
-    }
-    100% {
-        border-image: linear-gradient(45deg, #800075, #ff00bf) 1;
-    }
+.StyleImg {
+    width: calc((100vw - 130px - 6rem) / 7);
+    height: calc((100vw - 130px - 6rem) / 7);
 }
 
-.StyleImg{
-    width: calc((100vw - 130px - 6rem)  / 7);
-}
-.StyleP{
+.Container .StyleP {
     font-family: 'Arkhip', sans-serif;
     font-size: 16px;
+    background: linear-gradient(280deg, #361a64a1 0%, #20328ebf 100%);
+    height: max-content;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem  ;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.StylePA {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background: #1a1a1a;
+    height: max-content;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

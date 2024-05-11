@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 import module from './SpotifyPopularAlbum.module.css';
 import Album from './Album/Album';
 
-interface Album {
+interface AlbumInfo {
   id: string;
   name: string;
+  artists: { name: string }[];
   images: { url: string }[];
 }
 
 const CLIENT_ID = "955e45726e0a420cbf69c089775c0762";
 const CLIENT_SECRET = "8a8d7cde24ab4f67ba15d588748fa26b";
 
-// Функция для получения альбомов из сессионного хранилища
-const getAlbumsFromStorage = (): Album[] => {
+const getAlbumsFromStorage = (): AlbumInfo[] => {
   const albumsString = sessionStorage.getItem('albums');
   if (albumsString) {
     return JSON.parse(albumsString);
@@ -21,13 +21,12 @@ const getAlbumsFromStorage = (): Album[] => {
   }
 };
 
-// Функция для сохранения альбомов в сессионном хранилище
-const saveAlbumsToStorage = (albums: Album[]) => {
+
+const saveAlbumsToStorage = (albums: AlbumInfo[]) => {
   sessionStorage.setItem('albums', JSON.stringify(albums));
-  
 };
 
-const fetchPopularAlbums = async (accessToken: string): Promise<Album[]> => {
+const fetchPopularAlbums = async (accessToken: string): Promise<AlbumInfo[]> => {
   try {
     const response = await fetch('https://api.spotify.com/v1/browse/new-releases', {
       headers: {
@@ -42,11 +41,10 @@ const fetchPopularAlbums = async (accessToken: string): Promise<Album[]> => {
     console.error('Error fetching popular albums:', error);
     return [];
   }
-  
 };
 
 const PopularAlbumSlider: React.FC = () => {
-  const [albums, setAlbums] = useState<Album[]>(getAlbumsFromStorage());
+  const [albums, setAlbums] = useState<AlbumInfo[]>(getAlbumsFromStorage());
   const [accessToken, setAccessToken] = useState<string>("");
 
   useEffect(() => {
@@ -66,13 +64,11 @@ const PopularAlbumSlider: React.FC = () => {
           setAccessToken(accessToken);
           fetchPopularAlbums(accessToken).then(items => {
             setAlbums(items);
-            saveAlbumsToStorage(items); // Сохранить альбомы в сессионном хранилище
+            saveAlbumsToStorage(items); // Save albums to session storage
           });
-          
-        });
-        
+          console.log(data.result);
+        });  
     }
-    
   }, [albums]);
 
   return (

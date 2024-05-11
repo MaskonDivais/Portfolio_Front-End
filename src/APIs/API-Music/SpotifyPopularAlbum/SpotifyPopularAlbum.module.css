@@ -1,37 +1,40 @@
-.Container{
-    display: inline-flex;
-    width: 100%;
-    height: 100%;
-    overflow-x: scroll;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    gap: 1rem;
-    transition: all 0.3s;
+.Container {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 1rem;
+  transition: all 0.3s;
 }
+
 /* Стилизация скроллбара */
 .Container::-webkit-scrollbar {
 
-    width: 10px; /* Ширина скроллбара */
-    transition: all 0.3s;
-  }
-  
-  /* Стилизация трека скроллбара */
-  .Container::-webkit-scrollbar-track {
-    margin-top: 10px;
-    padding-top: 1rem;
-    
-    background: #555;
-    transition: all 0.3s;
-  }
-  
-  /* Стилизация полосы прокрутки */
-  .Container::-webkit-scrollbar-thumb {
-    
-    background: #414141; /* Цвет полосы */
-    transition: all 0.3s;
-  }
-  
-  /* Изменение цвета полосы при наведении */
-  .Container::-webkit-scrollbar-thumb:hover {
-    background: #361a64 ;
-  }
+
+  height: 2rem;
+  transition: all 0.3s;
+}
+
+/* Стилизация трека скроллбара */
+.Container::-webkit-scrollbar-track {
+  margin-top: 10px;
+  padding-top: 1rem;
+
+  background: #555;
+  transition: all 0.3s;
+}
+
+/* Стилизация полосы прокрутки */
+.Container::-webkit-scrollbar-thumb {
+
+  background: #414141;
+  /* Цвет полосы */
+  transition: all 0.3s;
+}
+
+/* Изменение цвета полосы при наведении */
+.Container::-webkit-scrollbar-thumb:hover {
+  background: #361a64;
+}
