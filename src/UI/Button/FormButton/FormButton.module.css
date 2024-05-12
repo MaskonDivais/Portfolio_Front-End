@@ -1,27 +1,31 @@
-.FormButton{
-    grid-area: FormButton;
-    display: block;
-    position: relative;
-    margin: 0px;
 
+  .FormButton {
+    grid-area: FormButton;
+    display: inline-block;
+    position: relative;
+    margin: 0;
     padding: 7px;
     width: 10rem;
-    height: auto;
- 
-    color: rgb(255, 255, 255);
+    color: #fff;
     background: linear-gradient(280deg, #361a64a1 0%, #20328ebf 100%);
     font-size: 16px;
-    border-radius: 15px;
-    border: solid 1px #ffffffb0;
-    transition: all .3s;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.FormButton:hover{
+    left: calc(50% - 5rem);
+    overflow: hidden;
+    transform: skewX(-25deg); 
+    border: solid 3px;
+    border-image: linear-gradient(80deg, #896abb 0%, #5361a8 100%) 3; 
+    transition: all 0.3s;
+  }
+  
+  .FormButton:hover {
     color: #00d4ed;
-    background: linear-gradient(280deg, #361a64a1 0%, #20328ebf 100%);
-    border: solid 1px #00d4ed;
-}
+    border-image: linear-gradient(85deg, #00d4ed, #0353ff) 2; 
+  }
+  
+  .FormButton span {
+    font-family: 'Arkhip', sans-serif;
+    display: block;
+    transform: skewX(25deg); 
+    border-image: linear-gradient(80deg, #361a64 0%, #20328e 100%) 3; 
+  }
+  

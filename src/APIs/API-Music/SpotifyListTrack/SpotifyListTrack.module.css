@@ -1,24 +1,26 @@
-
 .verticalSliderContainer {
-  width: calc(50vw - 70px);
-  height: 90%;
-  position: absolute;
-  margin: 0px 70px 0px 0px;
-  padding: 0px;
-  background-color: rgb(33 33 33);
-  border-radius: 10px;
-  right: 0px;
+    width: calc(50vw - 50px);
+    height: 100%;
+    position: absolute;
+    margin: 0px 50px 0px 0px;
+    padding: 0px;
+    background-color: rgb(33 33 33);
+    border-radius: 10px;
+    right: 0px;
 }
-  
-  .verticalSlider {
+
+.verticalSlider {
     display: flex;
-    flex-direction: column; /* Изменили направление флекс-контейнера на вертикальное */
+    flex-direction: column;
+    /* Изменили направление флекс-контейнера на вертикальное */
     transition: transform 0.5s ease-in-out;
     height: 100%;
     justify-content: center;
-  }
-  
-  .sliderItem {
+    gap: 0.3rem;
+    padding: 0px 1rem;
+}
+
+.sliderItem {
     background: #ffffff00;
     min-height: 7vh;
     width: auto;
@@ -28,14 +30,14 @@
     border-radius: 2px;
     margin: 5px;
     display: grid;
-    grid-template-columns: 10% 20% 25% ;
+    grid-template-columns: 10% 20% 25%;
     grid-template-areas: "imgs names caption";
     align-items: center;
     justify-content: start;
     justify-items: start;
-  }
-  
-  .sliderItem img {
+}
+
+.sliderItem img {
     width: 5vh;
     height: 5vh;
     background: azure;
@@ -43,11 +45,13 @@
     position: absolute;
     margin: 1vh;
 
-  }
-  .imgs{
+}
+
+.imgs {
     grid-area: imgs;
-  }
-  .names{
+}
+
+.names {
     font-family: 'Arkhip', sans-serif;
     grid-area: names;
     position: absolute;
@@ -55,8 +59,9 @@
 
     padding: 5px;
     border-radius: 5px;
-  }
-  .caption {
+}
+
+.caption {
     grid-area: caption;
     position: absolute;
 
@@ -68,10 +73,10 @@
     display: grid;
     align-items: center;
     justify-items: center;
-  }
-  
-  .prevBtn,
-  .nextBtn {
+}
+
+.prevBtn,
+.nextBtn {
     position: absolute;
     background-color: #ffffff00;
     color: #fff;
@@ -79,21 +84,22 @@
     padding: 0px;
     cursor: pointer;
     transform: rotate(90deg);
-    
-  }
-  
-  .prevBtn {
-    top: 10px; /* Сдвигаем кнопку вверх */
-    left: 50%;
-    transform-origin: center center;
-    transform:  scale(3) rotate(90deg);
 
-  }
-  
-  .nextBtn {
-    bottom: 10px; /* Сдвигаем кнопку вниз */
+}
+
+.prevBtn {
+    top: 1rem;
+    /* Сдвигаем кнопку вверх */
     left: 50%;
     transform-origin: center center;
-    transform:  scale(3) rotate(90deg);
-  }
-  
+    transform: scale(3) rotate(90deg);
+
+}
+
+.nextBtn {
+    bottom: 1rem;
+    /* Сдвигаем кнопку вниз */
+    left: 50%;
+    transform-origin: center center;
+    transform: scale(3) rotate(90deg);
+}

@@ -1,0 +1,62 @@
+.StyleImg {
+    width: 30px;
+    height: 30px;
+}
+
+.Track {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: max-content;
+    width: calc(100% - 1rem);
+    align-content: center;
+    background: rgb(29, 29, 29);
+    gap: 1rem;
+    border-radius: 3px;
+    padding: 0.3rem 0.3rem;
+
+
+}
+
+.Track:hover {
+    background: linear-gradient(280deg, #361a64a1 0%, #20328ebf 100%);
+}
+
+.Details {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    align-content: center;
+
+}
+
+.StyleH3 {
+
+
+    font-size: 13px;
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.StyleP {
+    font-family: 'Arkhip', sans-serif;
+
+    font-size: 13px;
+    width: calc(100% - 35% - 2rem);
+
+}
+
+.Duration {
+
+
+    font-size: 13px;
+    width: max-content;
+    display: grid;
+    justify-items: center;
+}

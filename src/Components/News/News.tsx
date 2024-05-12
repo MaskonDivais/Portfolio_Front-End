@@ -19,7 +19,7 @@ const News: React.FC = () => {
   const postsPerPage = 12;
 
   useEffect(() => {
-    const storedNews = localStorage.getItem('savedNews');
+    const storedNews = sessionStorage.getItem('savedNews'); // Заменяем localStorage на sessionStorage
     if (storedNews) {
       setNews(JSON.parse(storedNews));
       setLoading(false);
@@ -29,13 +29,12 @@ const News: React.FC = () => {
           const url = `https://newsapi.org/v2/everything?q=music%20AND%20(image%20OR%20photo%20OR%20picture%20OR%20photograph)&language=en&pageSize=100&sortBy=relevancy&apiKey=9f16f226dbd54360aa4faefe09639f15`;
           const response = await axios.get<{ articles: Article[] }>(url);
 
-          // Фильтруем статьи, оставляем только те, у которых есть изображение
           const articlesWithImages: Article[] = response.data.articles.filter((item: Article) => item.urlToImage !== null);
           console.log('Response...');
 
           if (articlesWithImages.length > 0) {
             setNews(articlesWithImages);
-            localStorage.setItem('savedNews', JSON.stringify(articlesWithImages));
+            sessionStorage.setItem('savedNews', JSON.stringify(articlesWithImages)); // Заменяем localStorage на sessionStorage
             setLoading(false);
           } else {
             console.log('Новости без изображений не найдены.');
@@ -49,7 +48,6 @@ const News: React.FC = () => {
     }
   }, []);
 
-  
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = news.slice(indexOfFirstPost, indexOfLastPost);

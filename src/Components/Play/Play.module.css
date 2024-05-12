@@ -6,7 +6,9 @@
     background: linear-gradient(180deg, rgba(13,13,13,1) 0%, rgba(29,31,30,1) 100%);
 }
 .fon{
-    height: 100vh;
+    position: absolute;
+    height: calc(100vh - 5vh);
+    bottom: 0px;
     width: 100%;
     margin: 0px;
     display: grid;

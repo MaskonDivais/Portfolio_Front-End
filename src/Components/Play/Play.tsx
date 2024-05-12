@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import module from '../Play/Play.module.css'
-import ListTrek from '../Play/ListTrek/ListTrek'
+
 import { useTheme } from '../ThemeContext';
 import "../StyleGlobal/Dark.css"
 import "../StyleGlobal/Light.css"
+import SpotifyListTrack from '../../APIs/API-Music/SpotifyListTrack/SpotifyListTrack';
 
 const Play = () => {
   const { isDarkTheme } = useTheme();
@@ -41,7 +42,7 @@ const Play = () => {
               <button  className={module.Next}onClick={nextTrack}>Next</button>
             </div>
           </div>
-          <ListTrek/>
+          <SpotifyListTrack/>
         </div>
     </div>
   )

@@ -5,22 +5,23 @@
     padding: 0px;
     height: 50vh;
     width: 80vw;
-    background: #0d0f0f;
+    background: url(/public/Images/Forma.jpg) no-repeat center center/cover;
     border: solid 1px #192f93;
     border-radius: 30px;
+    align-items: center;
 }
 .ConteinerForm{
     display: grid;
     position: relative;
     margin: 0px;
     padding: 0px;
-    width: 65%;
+    width: 80%;
     height: -webkit-fill-available;
     border-radius: 30px;
     justify-items: center;
     align-items: center;
     z-index: 1;
-    background: url(/public/Images/Forma.png) no-repeat center center/cover;
+    /* background: url(/public/Images/Forma.png) no-repeat center center/cover; */
     
 }
 .Form{
@@ -48,7 +49,7 @@
     justify-items: stretch;
     justify-content: center;
     border-radius: 30px;
-    background-color: #0000004a;
+    background-color: #0000008a;
     /* background: url(/public/Images/form.png) no-repeat center center/cover; */
    
 
@@ -142,45 +143,37 @@
 
 .ConteinerQuestion{
     display: grid;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    margin: 0px;
-    padding: 0px; 
-    width: 35%;
-    height: 100%;
+    margin: 0px 1rem 0px 0px;
+    padding: 0px;
+    width: 25%;
+    height: 90%;
     border-radius: 30px;
-
     top: 0px;
     right: 0px;
     z-index: 0;
+    background: #0000004a;
+    
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
    
 }
 .Question{
+    position: relative;
     width: 100%;
-    height: 85%;
-    padding: 1rem;
-    
+    height: 100%;
     display: grid;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
+    gap: 1rem;
     align-content: center;
-    gap: 10px;
-    border-radius: 30px;
- 
 }
 .ListQuestion{
     width: -webkit-fill-available;
-    
+    height: -webkit-fill-available;
     display: grid;
     gap: 0.3rem;
-    align-items: center;
-    justify-items: stretch;
-    justify-content: center;
     align-content: center;
-    
-
+    align-items: center;
 }
 ul{
     
@@ -189,25 +182,30 @@ ul{
 .liQ{
     height: -webkit-fill-available;
     width: -webkit-fill-available;
-    /* background: rgb(0 0 0 / 41%); */
-    padding: 2.5% 1rem;
-    /* border-radius: 15px; */
+    padding: 2% 1rem;
     font-family: 'Arkhip', sans-serif;
     font-size: 0.8rem;
     transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .liQ:hover{
    color: aqua;
    background: rgba(32, 32, 32, 0.82);
 }
 .FAQ{
-
+    background: linear-gradient(80deg, #361a64a1 0%, #20328ebf 100%);
     font-family: 'Arkhip', sans-serif;
     font-size: 1.15rem;
-    text-align: center;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
+
+
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    padding: 2% 1rem;
+
+    transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
