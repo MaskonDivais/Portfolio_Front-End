@@ -73,7 +73,7 @@ const App: React.FC = () => {
     <ThemeProvider>
       <div className="container">
 
-      {/* {isAuthenticated ? null: <Login setIsAuthenticated={setIsAuthenticated} />} */}
+      {isAuthenticated ? null: <Login setIsAuthenticated={setIsAuthenticated} />}
 
         <div className="slides">
           {activeSlide === 0 && <Start />}
