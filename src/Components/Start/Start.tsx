@@ -26,7 +26,6 @@ const Start = () => {
             <h1 className={module.H2}>Popular Albums</h1>
             <SpotifyPopularAlbum/>
           </div>
-
         </div>
     </div>
   )
