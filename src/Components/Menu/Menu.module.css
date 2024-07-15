@@ -9,7 +9,7 @@ input::placeholder {
   
 .conteiner{
     display: grid;
-    grid-template-columns: max-content max-content max-content max-content auto max-content max-content  max-content;
+    grid-template-columns: max-content max-content max-content max-content auto auto max-content max-content  max-content;
 
     align-content: center;
     align-items: center;
@@ -27,7 +27,30 @@ input::placeholder {
  
     justify-items: stretch;
 }
+.ContTitleSlide{
+    width: 25vw;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
 
+}
+.TitleSlide{
+    font-family: 'Arkhip', sans-serif;
+    font-size: 1.5rem;
+    text-align: justify;
+    color: #fff;
+    width: max-content;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   
+    text-overflow: ellipsis;
+}
+.Line{
+    height: 1px;
+    background: #ffffff;
+    width: -webkit-fill-available;
+}
 .Logo{
     height: 2.1vh;
     width: 2.1vh;
@@ -53,6 +76,7 @@ input::placeholder {
 
 
 .icon{
+    display: block;
     height: 2.1vh;
     width: 2.1vh;
     margin: 5px;
@@ -108,8 +132,8 @@ input::placeholder {
 }
 .InputSearch{
     color: #fff;
-    background: #f0f8ff00;
-    border: solid 1px #707070;
+    background: #1c1e1d;
+        border: solid 1px #7e7e76;
     border-radius: 15px;
     padding: 0px 0px 0px 10px;
     width: 30.5vw;

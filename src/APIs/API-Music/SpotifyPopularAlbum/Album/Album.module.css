@@ -1,7 +1,7 @@
 .Container {
     display: grid;
     border: 2px solid;
-    width: 20vw;
+    width: calc((100vw - 130px - 6rem) / 7);
     height: max-content;
     border-radius: 10px;
     position: relative;
@@ -30,15 +30,43 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: initial;
+   
 }
+.StyleCont{
+    display: grid;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 0.5rem 0.5rem;
+    width: -webkit-fill-available;
+    grid-template-columns: 50% 50%;
 
+}
 .StylePA {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     background: #1a1a1a;
     height: max-content;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #afafaf;
+ 
+    overflow: hidden;
+}
+.StylePD{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background: #1a1a1a;
+    height: max-content;
+    padding: 0rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #afafaf;
+   
+    overflow: hidden;
 }

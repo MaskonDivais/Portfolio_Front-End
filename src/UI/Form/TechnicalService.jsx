@@ -12,37 +12,34 @@ const TecnicalServise = () => {
       <div className={module.ConteinerForm}>
         <form className={module.Form}>
 
-          <div className={module.Logotype} />
-          <p className={module.P1}>Technical support service</p>
-          <p className={module.P2}>Tell us what roles we have already met and we will try to help you as soon as possible.</p>
+          <div className={module.Logotype} /><div className={module.Line}/>
 
-          <label className={module.LabelName}>Name: <input className={module.Input} type="text" placeholder="User Name"></input></label>
+          <label className={module.LabelName}>Name: <input className={module.Input} type="text" placeholder="Preferred Name"></input></label>
           <label className={module.LabelMail}>Mail: <input className={module.Input} type="text" placeholder="User Mail"></input></label>
+          <label className={module.LabelTitle}>Title: <input className={module.InputT} type="text" placeholder="Brief description of the problem"></input></label>
+
+          <label className={module.LabelQues}>Frequently Questions:
+            <select className={module.Select} id="phone" name="phone">
+              <option value="iphone 6s">Other question</option>
+              <option value="iphone 6s">Configure playback on multiple devices?</option>
+              <option value="lumia 950">Download songs for offline listening</option>
+              <option value="nexus 5x">Set up notifications for new releases?</option>
+              <option value="galaxy s7">Share a song or playlist with friends?</option>
+              <option value="galaxy s7">Find a song or artist by keyword?</option>
+              <option value="galaxy s7">Create your own playlist?</option>
+              <option value="galaxy s7">Manage playback queue?</option>
+              <option value="galaxy s7">Add a song to a playlist?</option>
+              <option value="galaxy s7">Use the radio feature?</option>
+            </select>
+          </label>
 
           <label className={module.LabelProblem}>Problem: <textarea name="user_message" required className={module.Textarea} cols={50} id="message" rows={5}></textarea></label>
 
-          <FormButtom />
+          <FormButtom>Send</FormButtom>
 
         </form>
       </div>
-      <div className={module.ConteinerQuestion}>
-        <div className={module.Question}>
-          <p className={module.FAQ}>Frequently Asked Questions</p>
-          <ul className={module.ListQuestion}>
-            <li className={module.liQ}>Configure playback on multiple devices?</li>
-            <li className={module.liQ}>Download songs for offline listening?</li>
-            <li className={module.liQ}>Set up notifications for new releases?</li>
-            <li className={module.liQ}>Share a song or playlist with friends?</li>
-            <li className={module.liQ}>Find a song or artist by keyword?</li>
-            <li className={module.liQ}>Adjust audio playback quality?</li>
-            <li className={module.liQ}>Create your own playlist?</li>
-            <li className={module.liQ}>Manage playback queue?</li>
-            <li className={module.liQ}>Add a song to a playlist?</li>
-            <li className={module.liQ}>Use the radio feature?</li>
-          </ul>
-        </div>
 
-      </div>
     </div>
   )
 }

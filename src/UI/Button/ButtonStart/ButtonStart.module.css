@@ -1,15 +1,19 @@
 
-  .FormButton {
-    grid-area: FormButton;
+
+  
+  .ButtonStart {
+
     display: inline-block;
     position: relative;
     margin: 0;
     padding: 7px;
     width: 10rem;
+    min-width: max-content;
     color: #fff;
     background: linear-gradient(280deg, #361a64a1 0%, #20328ebf 100%);
     font-size: 16px;
-    left: calc(50% - 5rem);
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
     transform: skewX(-25deg); 
     border: solid 3px;
@@ -19,7 +23,7 @@
   
 
   
-  .FormButton span {
+  .ButtonStart span {
     color: #fff;
     font-family: 'Arkhip', sans-serif;
     display: block;
@@ -27,7 +31,7 @@
     border-image: linear-gradient(80deg, #361a64 0%, #20328e 100%) 3; 
   }
 
-  .FormButton:hover {
+  .ButtonStart:hover {
     color: #00d4ed !important;
     border-image: linear-gradient(85deg, #00d4ed, #0353ff) 2; 
   }

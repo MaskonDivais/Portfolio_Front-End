@@ -146,7 +146,7 @@ const Login: React.FC<Props> = ({ setIsAuthenticated }) => {
                     <div className={module.conWith}><div className={module.LogApple} /><p className={module.PW}>Apple Computer Inc</p></div>
                     <div className={module.conWith}><div className={module.LogGoogle} /><p className={module.PW}>Google Company</p></div>
                     
-                    <ButtonLogWith onClick={handleLogWithOn} buttonText="Sign Up" />
+                    <ButtonLogWith onClick={handleLogWithOn} buttonText="Registration" />
                   </div>
                   <div className={module.ContLow}>
                     <div className={module.button}><ButtonLogForm buttonText="Login With"/></div>

@@ -36,10 +36,11 @@ const Ander: React.FC = () => {
             <div className={module.Author}><div className={stlAU}/></div>
            
             <div className={module.Links}>
-              <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconLInked']}`}/><a className={module.A} href="">LinkedIn</a></div>
-              <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconGit']}`}/><a className={module.A} href="">GitHub</a></div>
-              <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconLeet']}`}/><a className={module.A} href="">LeetCode</a></div>
-              <div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconInst']}`}/><a className={module.A} href="">Instagram</a></div>
+              <a className={module.A} href="https://www.linkedin.com/in/alexander-doroshkevich/" target="_blank" rel="noopener"><div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconLInked']}`}/><div className={module.A}>LinkedIn</div></div></a>
+              <a className={module.A} href="https://github.com/MaskonDivais" target="_blank" rel="noopener"><div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconGit']}`}/><div className={module.A}>GitHub</div></div></a>
+              <a className={module.A} href="https://leetcode.com/u/doroshkevichgraf/" target="_blank" rel="noopener"><div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconLeet']}`}/><div className={module.A}>LeetCode</div></div></a>
+              <a className={module.A} href="https://www.instagram.com/alex_reasonable/?igshid=ZDdkNTZiNTM%3D" target="_blank" rel="noopener"><div className={module.ElemLinks}><div className={`${module['Icon']} ${module['IconInst']}`}/><div className={module.A}>Instagram</div></div></a>
+       
             </div>
 
             <div className={module.Navi}><Weather/></div>

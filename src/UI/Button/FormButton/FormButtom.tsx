@@ -1,10 +1,16 @@
-import React from 'react'
-import module from './FormButton.module.css'
+import React from 'react';
+import module from './FormButton.module.css';
 
-const FormButtom = () => {
-  return (
-    <button type="button" title="Send Form" className={module.FormButton}><span className={module.Span}>Send</span></button>
-  )
+interface FormButtonProps {
+  children: React.ReactNode;
 }
 
-export default FormButtom
+const FormButton: React.FC<FormButtonProps> = ({ children }) => {
+  return (
+    <button type="button" title="Send Form" className={module.FormButton}>
+      <span className={module.Span}>{children}</span>
+    </button>
+  );
+};
+
+export default FormButton;
