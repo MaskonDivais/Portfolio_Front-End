@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    z-index: 2;
+    
     background-image: url(/public/Images/LogInFon.png);
     filter: drop-shadow(23px 10px 3px #00000086);
 
@@ -23,7 +23,7 @@
 
 .conteiner_fon{
     position: absolute;
-    z-index: 1;
+    z-index: 99;
     height: 100vh;
     width: 100%;
     margin: 0px;

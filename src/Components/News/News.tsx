@@ -62,7 +62,7 @@ const News: React.FC = () => {
 
       <div className={styles.ContNews}>
         {loading ? (
-          <div>Loading...</div>
+          <div>Autorisation...</div>
         ) : (
           currentPosts.map(newsItem => (
             <ElemNews key={newsItem.url} news={newsItem} />

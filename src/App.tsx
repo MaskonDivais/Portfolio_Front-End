@@ -10,7 +10,12 @@ import Menu from './Components/Menu/Menu';
 import News from './Components/News/News';
 
 const App: React.FC = () => {
-
+  const slideTitles = [
+    'Main Page',
+    'Player',
+    'Actual News',
+    'Technical Support'
+  ];
 
   // Start Scroll
   const nextSlide = () => { setActiveSlide((prevSlide) => (prevSlide + 1) % 4); };
@@ -84,7 +89,7 @@ const App: React.FC = () => {
 
         <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
 
-        {isAuthenticated ? <Menu /> : <Menu /> }
+        {isAuthenticated ? <Menu slideTitle={slideTitles[activeSlide]} /> : <div/> }
 
       </div>
     </ThemeProvider>
