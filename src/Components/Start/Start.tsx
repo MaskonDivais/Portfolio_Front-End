@@ -33,11 +33,11 @@ const Start: React.FC<StartProps> = ({ setActiveSlide }) => {
           <div className={module.Pidps} />
         </div>
 
-        <div className={module.ContainerPopularList}>
-          <h1 className={module.H2}>Popular Albums</h1>
-          <SpotifyPopularAlbum />
+          <div className={module.ContainerPopularList}>
+            <h1 className={module.H2}>Popular Albums</h1>
+            <SpotifyPopularAlbum/>
+          </div>
         </div>
-      </div>
     </div>
   );
 }
