@@ -88,16 +88,15 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <div className="container">
-        {isAuthenticated ? (
-          <div className="slides">
-            {activeSlide === 0 && <Start setActiveSlide={setActiveSlide} />}
-            {activeSlide === 1 && <Play />}
-            {activeSlide === 2 && <News />}
-            {activeSlide === 3 && <Ander />}
-          </div>
-        ) : (
-          <Login setIsAuthenticated={setIsAuthenticated} />
-        )}
+
+      {isAuthenticated ? null: <Login setIsAuthenticated={setIsAuthenticated} />}
+
+        <div className="slides">
+          {activeSlide === 0 && <Start />}
+          {activeSlide === 1 && <Play />}
+          {activeSlide === 2 && <News/>}
+          {activeSlide === 3 && <Ander />}
+        </div>
 
         <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
 
