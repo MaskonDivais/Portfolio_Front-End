@@ -1,68 +1,50 @@
 import React, { useState, useEffect } from 'react';
-import { ThemeProvider } from './Components/ThemeContext';
 import './style.css';
-
-import Start from '../src/Components/Start/Start';
-import Play from '../src/Components/Play/Play';
-import News from '../src/Components/News/News';
-import Menu from '../src/Components/Menu/Menu';
-import Ander from '../src/Components/Ander/Ander';
-import Navigation from '../src/UI/Navigation/Navigation';
-import Login from '../src/Components/LogIn/Login';
+import Start from './Components/Start/Start';
+import Play from './Components/Play/Play';
+import Ander from './Components/Ander/Ander';
+import Navigation from './UI/Navigation/Navigation';
+import Login from './Components/LogIn/Login';
+import { ThemeProvider } from './Components/ThemeContext';
+import Menu from './Components/Menu/Menu';
+import News from './Components/News/News';
 
 const App: React.FC = () => {
-  const slideTitles = [
-    'Main Page',
-    'Player',
-    'Actual News',
-    'Technical Support'
-  ];
 
-  const [activeSlide, setActiveSlide] = useState<number>(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const [lettersVisible, setLettersVisible] = useState<number>(0);
-  const [isAuthenticated, setIsAuthenticated] = useState(false); 
 
   // Start Scroll
-  const nextSlide = () => {
-    setActiveSlide((prevSlide) => (prevSlide + 1) % 4);
-  };
-
-  const prevSlide = () => {
-    setActiveSlide((prevSlide) => (prevSlide - 1 + 4) % 4);
-  };
+  const nextSlide = () => { setActiveSlide((prevSlide) => (prevSlide + 1) % 4); };
+  const prevSlide = () => { setActiveSlide((prevSlide) => (prevSlide - 1 + 4) % 4); };
 
   const handleScroll = (event: WheelEvent) => {
     const delta = event.deltaY;
-    if (delta > 0) {
-      nextSlide();
-    } else if (delta < 0) {
-      prevSlide();
-    }
+    if (delta > 0) { nextSlide(); }
+    else if (delta < 0) { prevSlide(); }
   };
 
   useEffect(() => {
     const handleScrollWrapper = (event: Event) => {
-      if (event instanceof WheelEvent) {
-        handleScroll(event);
-      }
+      if (event instanceof WheelEvent) { handleScroll(event); }
     };
     window.addEventListener('wheel', handleScrollWrapper);
-    return () => {
-      window.removeEventListener('wheel', handleScrollWrapper);
-    };
+    return () => { window.removeEventListener('wheel', handleScrollWrapper); };
   }, []);
   // End Scroll
 
   // Start isLoading
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2);
   }, []);
   // End isLoading
 
   // Start Animation Load
+  const [activeSlide, setActiveSlide] = useState<number>(0);
+  const [lettersVisible, setLettersVisible] = useState<number>(0);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLettersVisible((prevLettersVisible) => prevLettersVisible + 1);
@@ -71,6 +53,8 @@ const App: React.FC = () => {
   }, [lettersVisible]);
 
   const word = 'MASFLEX';
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Переносим useState сюда
 
   if (isLoading) {
     return (
@@ -100,11 +84,11 @@ const App: React.FC = () => {
 
         <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
 
-        <Menu slideTitle={slideTitles[activeSlide]} />
+        {isAuthenticated ? <Menu /> : <Menu /> }
+
       </div>
     </ThemeProvider>
   );
 };
 
 export default App;
-

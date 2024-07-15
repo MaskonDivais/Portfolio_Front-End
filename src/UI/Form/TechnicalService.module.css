@@ -1,53 +1,47 @@
-
-.Conteiner {
+.Conteiner{
     display: inline-flex;
     position: relative;
     margin: 0px;
     padding: 0px;
-    height: 55vh;
-    margin-top: 5vh;
+    height: 50vh;
     width: 80vw;
     background: url(/public/Images/Forma.jpg) no-repeat center center/cover;
     border: solid 1px #192f93;
     border-radius: 30px;
     align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: nowrap;
 }
-
-.ConteinerForm {
+.ConteinerForm{
     display: grid;
     position: relative;
     margin: 0px;
     padding: 0px;
-    width: inherit;
+    width: 80%;
     height: -webkit-fill-available;
     border-radius: 30px;
     justify-items: center;
     align-items: center;
     z-index: 1;
     /* background: url(/public/Images/Forma.png) no-repeat center center/cover; */
-
+    
 }
-
-.Form {
+.Form{
     display: grid;
     position: relative;
     margin: 0px;
-    padding: 0px; 
-    width: inherit;
-    height: inherit;
+    padding: 1% 5%;
+    width: max-content;
+    height: 90%;
     align-items: center;
-    align-content: center;
+    align-content: center;    
     grid-template-columns: auto auto;
     grid-template-areas:
-        "Logotype Logotype Logotype"
-        "Line Line Line"
-        "LabelName LabelMail LabelQues"
-        "LabelTitle LabelTitle LabelTitle"
-        "LabelProblem LabelProblem LabelProblem"
-        "FormButton FormButton FormButton";
+        "Logotype Logotype"
+        "P1 P1"
+        "P2 P2"
+        "LabelName LabelMail"
+        "LabelProblem LabelProblem"
+        "LabelPriority none"
+        "FormButton FormButton";
     gap: 10px;
     font-family: 'Colibri', sans-serif;
     font-size: 14px;
@@ -56,54 +50,47 @@
     justify-content: center;
     border-radius: 30px;
     background-color: #0000008a;
-}
+    /* background: url(/public/Images/form.png) no-repeat center center/cover; */
+   
 
-.P1 {
+    
+}
+.P1{
     grid-area: P1;
     font-family: 'Arkhip', sans-serif;
-    font-size: 1.5rem;
-    text-align: justify;
-    color: #fff;
+    font-size: 19px;
+    text-align: center;
 }
-
-.P2 {
+.P2{
     grid-area: P2;
 }
-
-.LabelName {
+.LabelName{
     font-family: 'Arkhip', sans-serif;
     grid-area: LabelName;
     display: grid;
     gap: 5px;
-    font-size: 0.835rem;
 }
-
-.LabelMail {
+.LabelMail{
     font-family: 'Arkhip', sans-serif;
     grid-area: LabelMail;
     display: grid;
     gap: 5px;
-    font-size: 0.835rem;
 }
-
-.LabelProblem {
+.LabelProblem{
     font-family: 'Arkhip', sans-serif;
     grid-area: LabelProblem;
     display: grid;
     gap: 5px;
-    font-size: 0.835rem;
 }
-
-.LabelPriority {
+.LabelPriority{
     font-family: 'Arkhip', sans-serif;
     grid-area: LabelPriority;
     display: grid;
     width: 50%;
     gap: 5px;
-    font-size: 0.835rem;
 }
 
-.Logotype {
+.Logotype{
     grid-area: Logotype;
     width: 120px;
     height: 40px;
@@ -113,116 +100,112 @@
     background-repeat: no-repeat;
     background-image: url(/public/Images/Icon/Logo_2s.png);
 }
-
-.Input {
-    width: 15vw;
+.Input{
+    width: auto;
     height: auto;
     margin: 5px 0px;
     padding: 10px 5px;
     border-radius: 5px;
-    border: solid 2px #ffffff;
+    border: solid 1px #ffffff;
     background: #ffffff00;
     color: #ffffff !important;
 }
-
-.Textarea {
+.Textarea{
     resize: none;
     width: auto;
     height: auto;
     margin: 5px 0px;
     padding: 5px;
     border-radius: 5px;
-    border: solid 2px #ffffff;
+    border: solid 1px #ffffff;
     background: #ffffff00;
     color: #ffffff !important;
 }
-
-.LabelSelect {
+.LabelSelect{
     font-family: 'Arkhip', sans-serif;
     font-size: 13px;
     background: #ffffff00;
-    border: solid 2px #ffffff;
+    border: solid 1px #ffffff;
     color: #fff;
     border-radius: 5px;
     padding: 4px;
-
+    
 
 }
 
 
-.Input::placeholder {
-    font-family: 'Arkhip', sans-serif;
-    color: #9f9f9f !important; 
-    font-size: 0.835rem;
-}
-  
-.LabelOption {
+
+.LabelOption{
     background: #474747e1;
-    border: solid 2px #ffffff;
+    border: solid 1px #ffffff;
 }
 
-.LabelQues {
-    font-family: 'Arkhip', sans-serif;
-    grid-area: LabelQues;
+
+.ConteinerQuestion{
     display: grid;
-    gap: 5px;
-    font-size: 0.835rem;
+    position: relative;
+    margin: 0px 1rem 0px 0px;
+    padding: 0px;
+    width: 25%;
+    height: 90%;
+    border-radius: 30px;
+    top: 0px;
+    right: 0px;
+    z-index: 0;
+    background: #0000004a;
+    
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+   
 }
-
-.Select {
-    font-size: 0.835rem;
-    width: auto;
-    height: auto;
-    margin: 5px 0px;
-    padding: 10px 5px;
-    border-radius: 5px;
-    border: solid 2px #ffffff;
-    background: #ffffff00;
-    color: #9f9f9f !important;
-    font-family: 'Arkhip', sans-serif;
-
-}
-
-.Select:hover {
-    border-color: #888;
-}
-
-.Select option {
-    padding: 10px;
-    font-size: 0.835rem;
-    background-color: #1b1a1c;
-    color: #fff;
-    border-radius: 10px;
-    border: solid 2px #ffffff;
-}
-
-.Select option:hover {
-    background-color: #f1f1f1;
-}
-
-.LabelTitle {
-    font-family: 'Arkhip', sans-serif;
-    grid-area: LabelTitle;
+.Question{
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: grid;
-    gap: 5px;
+    gap: 1rem;
+    align-content: center;
 }
-.InputT{
-    width: auto;
-    height: auto;
-    margin: 5px 0px;
-    padding: 10px 5px;
-    border-radius: 5px;
-    border: solid 2px #ffffff;
-    background: #ffffff00;
-    color: #ffffff !important;
+.ListQuestion{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: grid;
+    gap: 0.3rem;
+    align-content: center;
+    align-items: center;
 }
-.InputT::placeholder {
+ul{
+    
+    list-style-type: none;
+}
+.liQ{
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    padding: 2% 1rem;
     font-family: 'Arkhip', sans-serif;
-    color: #9f9f9f !important; 
-    font-size: 0.835rem;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.Line{
-    grid-area: Line;
-    height: 1px;
-    background: #ffffff;
+.liQ:hover{
+   color: aqua;
+   background: rgba(32, 32, 32, 0.82);
+}
+.FAQ{
+    background: linear-gradient(80deg, #361a64a1 0%, #20328ebf 100%);
+    font-family: 'Arkhip', sans-serif;
+    font-size: 1.15rem;
+
+
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    padding: 2% 1rem;
+
+    transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

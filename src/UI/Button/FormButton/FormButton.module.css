@@ -17,17 +17,15 @@
     transition: all 0.3s;
   }
   
-
+  .FormButton:hover {
+    color: #00d4ed;
+    border-image: linear-gradient(85deg, #00d4ed, #0353ff) 2; 
+  }
   
   .FormButton span {
-    color: #fff;
     font-family: 'Arkhip', sans-serif;
     display: block;
     transform: skewX(25deg); 
     border-image: linear-gradient(80deg, #361a64 0%, #20328e 100%) 3; 
   }
-
-  .FormButton:hover {
-    color: #00d4ed !important;
-    border-image: linear-gradient(85deg, #00d4ed, #0353ff) 2; 
-  }
+  

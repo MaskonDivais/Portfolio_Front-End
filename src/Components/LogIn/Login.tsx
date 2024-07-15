@@ -12,39 +12,27 @@ interface Props {
 }
 
 const Login: React.FC<Props> = ({ setIsAuthenticated }) => {
-
-  
   const { isDarkTheme } = useTheme();
   const user = isDarkTheme ? 'icon_user_w' : 'icon_user_d';
   const pass = isDarkTheme ? 'icon_pass_w' : 'icon_pass_d';
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  
   const [showSignUpForm, setShowSignUpForm] = useState(false);
   const [showLogWith, setShowLogWith] = useState(false);
 
 
-  const handleSignUpClick = () => {
-    setShowSignUpForm(true);
-  };
-  
-  const handleSignInClick = () => {
-    setShowSignUpForm(false);
-  };
-  
+  const handleSignUpClick = () => { setShowSignUpForm(true); };
+  const handleSignInClick = () => { setShowSignUpForm(false); };
 
   const handleLogWithOn = () => { setShowLogWith(true); };
   const handleLogWithOff = () => { setShowLogWith(false); };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (username === '1' && password === '1') {
-      setIsAuthenticated(true); // Устанавливаем isAuthenticated в true
-    }
+    if (username === '1' && password === '1') { setIsAuthenticated(true); }
   };
-  
-  
+
   return (
     <div className={module.conteiner_fon}>
       <video src="/video/as3.mov" autoPlay muted loop />
@@ -69,7 +57,6 @@ const Login: React.FC<Props> = ({ setIsAuthenticated }) => {
           ><ButtonSwitchLog onClick={handleSignInClick} buttonText="Sign In" /></motion.div>
            
           )}
-
 
           {!showSignUpForm && (
             <form className={module.conteiner_form} onSubmit={handleSubmit}>
@@ -159,7 +146,7 @@ const Login: React.FC<Props> = ({ setIsAuthenticated }) => {
                     <div className={module.conWith}><div className={module.LogApple} /><p className={module.PW}>Apple Computer Inc</p></div>
                     <div className={module.conWith}><div className={module.LogGoogle} /><p className={module.PW}>Google Company</p></div>
                     
-                    <ButtonLogWith onClick={handleLogWithOn} buttonText="Registration" />
+                    <ButtonLogWith onClick={handleLogWithOn} buttonText="Sign Up" />
                   </div>
                   <div className={module.ContLow}>
                     <div className={module.button}><ButtonLogForm buttonText="Login With"/></div>

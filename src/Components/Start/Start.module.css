@@ -9,15 +9,13 @@
     display: grid;
     margin: 0px;
     padding: 0px;
-    height: max-content;
+    height: 40vh;
     width: 75vw;
     overflow: hidden;
     align-content: center;
-    margin-top: 5vh;
 }
 
 .startfon {
-    grid-template-rows: auto max-content;
     filter: drop-shadow(23px 10px 3px #00000086);
     height: 100vh;
     width: 100%;
@@ -28,14 +26,16 @@
     background-position: bottom;
     display: grid;
     justify-items: center;
+    align-content: center;
     justify-content: center;
     align-items: center;
+
 }
 
 .P1 {
     text-align: center;
     font-family: 'Arkhip', sans-serif;
-    font-size: 1.1rem;
+    font-size: 16px;
     width: 70%;
     float: right;
     display: block;
@@ -44,14 +44,6 @@
     top: 0%;
     left: 45%;
     transform: translate(-50%, -0%);
-}
-.P1::after{
-    content: "";
-    display: block;
-    height: 1px;
-    width: 100%;
-    background: #7d7d76;
-    margin-top: 0.7rem;
 }
 
 .H1 {
@@ -64,10 +56,9 @@
     position: relative;
     display: grid;
     width: calc(100vw - 100px);
-    height: max-content;
+    height: 50vh;
     align-content: center;
-    margin-bottom: 1rem;
-    bottom: 0px;
+
 }
 
 .H2 {
@@ -75,33 +66,4 @@
     font-size: 4vh;
     width: 100%;
     margin: 10px 0px;
-}
-.buttons{
-    font-family: 'Arkhip', sans-serif;
-    font-size: 16px;
-    width: 70%;
-    float: left;
-    display: inline-flex;
-    position: relative;
-    text-align: justify;
-    margin-top: 1rem;
-    gap: 1rem;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    left: 45%;
-    transform: translate(-50%, -0%);
-}
-.Pidps{
-    background-image: url(/public/Images/Icon/iconauthor.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 44vw;
-    height: 42vh;
-    top: 25%;
-    left: 85%;
-    transform: translate(-50%, -50%) rotate(-31deg);
-    z-index: -1;
 }

@@ -5,7 +5,6 @@ import Album from './Album/Album';
 interface AlbumInfo {
   id: string;
   name: string;
-  release_date: string;
   artists: { name: string }[];
   images: { url: string }[];
 }
