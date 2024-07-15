@@ -12,27 +12,39 @@ interface Props {
 }
 
 const Login: React.FC<Props> = ({ setIsAuthenticated }) => {
+
+  
   const { isDarkTheme } = useTheme();
   const user = isDarkTheme ? 'icon_user_w' : 'icon_user_d';
   const pass = isDarkTheme ? 'icon_pass_w' : 'icon_pass_d';
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  
   const [showSignUpForm, setShowSignUpForm] = useState(false);
   const [showLogWith, setShowLogWith] = useState(false);
 
 
-  const handleSignUpClick = () => { setShowSignUpForm(true); };
-  const handleSignInClick = () => { setShowSignUpForm(false); };
+  const handleSignUpClick = () => {
+    setShowSignUpForm(true);
+  };
+  
+  const handleSignInClick = () => {
+    setShowSignUpForm(false);
+  };
+  
 
   const handleLogWithOn = () => { setShowLogWith(true); };
   const handleLogWithOff = () => { setShowLogWith(false); };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (username === '1' && password === '1') { setIsAuthenticated(true); }
+    if (username === '1' && password === '1') {
+      setIsAuthenticated(true); // Устанавливаем isAuthenticated в true
+    }
   };
-
+  
+  
   return (
     <div className={module.conteiner_fon}>
       <video src="/video/as3.mov" autoPlay muted loop />
@@ -57,6 +69,7 @@ const Login: React.FC<Props> = ({ setIsAuthenticated }) => {
           ><ButtonSwitchLog onClick={handleSignInClick} buttonText="Sign In" /></motion.div>
            
           )}
+
 
           {!showSignUpForm && (
             <form className={module.conteiner_form} onSubmit={handleSubmit}>

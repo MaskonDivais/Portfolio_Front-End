@@ -7,7 +7,7 @@ import News from '../../Components/News/News';
 import Menu from '../../Components/Menu/Menu';
 import Ander from '../../Components/Ander/Ander';
 import Navigation from '../../UI/Navigation/Navigation';
-
+import Login from '../../Components/LogIn/Login';
 
 const Main: React.FC = () => {
   const slideTitles = [
@@ -20,7 +20,7 @@ const Main: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [lettersVisible, setLettersVisible] = useState<number>(0);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false); 
 
   // Start Scroll
   const nextSlide = () => {
@@ -57,7 +57,7 @@ const Main: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Увеличил время, чтобы тестировать анимацию
+    }, 2000);
   }, []);
   // End isLoading
 
@@ -87,17 +87,20 @@ const Main: React.FC = () => {
   return (
     <ThemeProvider>
       <div className="container">
-
-        <div className="slides">
-          {activeSlide === 0 && <Start setActiveSlide={setActiveSlide} />}
-          {activeSlide === 1 && <Play />}
-          {activeSlide === 2 && <News />}
-          {activeSlide === 3 && <Ander />}
-        </div>
+        {isAuthenticated ? (
+          <div className="slides">
+            {activeSlide === 0 && <Start setActiveSlide={setActiveSlide} />}
+            {activeSlide === 1 && <Play />}
+            {activeSlide === 2 && <News />}
+            {activeSlide === 3 && <Ander />}
+          </div>
+        ) : (
+          <Login setIsAuthenticated={setIsAuthenticated} />
+        )}
 
         <Navigation activeSlide={activeSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
 
-        {isAuthenticated ? <Menu slideTitle={slideTitles[activeSlide]} /> : <Menu slideTitle={slideTitles[activeSlide]} />}
+        <Menu slideTitle={slideTitles[activeSlide]} />
       </div>
     </ThemeProvider>
   );

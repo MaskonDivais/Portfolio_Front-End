@@ -3,6 +3,7 @@ import module from '../Start/Start.module.css';
 import { useTheme } from '../ThemeContext';
 import SpotifyPopularAlbum from '../../APIs/API-Music/SpotifyPopularAlbum/SpotifyPopularAlbum';
 import ButtonStart from '../../UI/Button/ButtonStart/ButtonStarm';
+import { Link } from 'react-router-dom';
 
 interface StartProps {
   setActiveSlide: (slide: number) => void;

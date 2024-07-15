@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://maskondivais.github.io/Portfolio_Front-End",
+  "homepage": "https://maskondivais.github.io/Portfolio_Front-End/",
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
     "@react-google-maps/api": "^2.19.3",
